@@ -1,0 +1,1658 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="雅昌朝鲜刻本古籍拍卖图文检索与数据可视化">
+  <title>图录浏览 · 朝鲜刻本拍卖文献库</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/style.css">
+  
+
+  <meta name="theme-color" content="#171513">
+  <meta name="color-scheme" content="dark">
+  <meta name="robots" content="index,follow">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="朝鲜刻本文献库">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="图录浏览 · 朝鲜刻本拍卖文献库">
+  <meta property="og:description" content="雅昌朝鲜刻本古籍拍卖图文检索与数据可视化">
+  <meta property="og:image" content="preview/home.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到正文</a>
+  <header class="site-header">
+    <div class="nav-shell">
+      <a class="brand" href="index.html">
+        <span class="brand-seal" aria-hidden="true">刻</span>
+        <span>
+          <strong>朝鲜刻本拍卖文献库</strong>
+          <small>2000–2025 · 图文检索与统计</small>
+        </span>
+      </a>
+      <nav aria-label="主导航">
+        <a href="index.html">总览</a>
+        <a href="browse.html" class="active">图录浏览</a>
+        <a href="dashboard.html">数据观察</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+
+<section class="page-heading">
+  <div><p class="eyebrow">Bibliographic index</p><h1>图录浏览</h1><p>所有筛选都在本机浏览器完成，不需要联网或启动服务。</p></div>
+  <div class="result-counter"><strong id="visible-count">58</strong><span>条匹配记录</span></div>
+</section>
+<section class="filter-panel" aria-label="图录筛选">
+  <div class="filter-search"><label for="browse-q">关键词</label><input id="browse-q" type="search" placeholder="书名、作者、描述"></div>
+  <div class="filter-field"><label for="year">拍卖年份</label><select id="year"><option value="">全部年份</option><option value="2025">2025</option><option value="2024">2024</option><option value="2023">2023</option><option value="2022">2022</option><option value="2021">2021</option><option value="2020">2020</option><option value="2019">2019</option><option value="2018">2018</option><option value="2017">2017</option><option value="2016">2016</option><option value="2013">2013</option><option value="2012">2012</option><option value="2011">2011</option><option value="2010">2010</option><option value="2009">2009</option><option value="2008">2008</option><option value="2007">2007</option><option value="2006">2006</option><option value="2005">2005</option><option value="2003">2003</option></select></div>
+  <div class="filter-field"><label for="company">拍卖公司</label><select id="company"><option value="">全部公司</option><option value="北京保利">北京保利</option><option value="中国嘉德">中国嘉德</option><option value="海王村">海王村</option><option value="中贸圣佳">中贸圣佳</option><option value="上海国拍">上海国拍</option><option value="博古斋">博古斋</option><option value="中鸿信">中鸿信</option><option value="北京卓德">北京卓德</option><option value="南京嘉宁">南京嘉宁</option><option value="广东崇正">广东崇正</option><option value="上海嘉泰">上海嘉泰</option><option value="上海崇源">上海崇源</option><option value="上海鸿海">上海鸿海</option><option value="北京万隆">北京万隆</option><option value="北京伍伦">北京伍伦</option><option value="孔网拍卖">孔网拍卖</option><option value="富彼国际">富彼国际</option><option value="景星麟凤">景星麟凤</option><option value="江苏两汉">江苏两汉</option><option value="美国蔡以声">美国蔡以声</option><option value="观古国际">观古国际</option></select></div>
+  <div class="filter-field"><label for="status">成交状态</label><select id="status"><option value="">全部状态</option><option value="成交">成交</option><option value="流拍">流拍</option><option value="未提供">未提供</option><option value="未提交">未提交</option></select></div>
+  <div class="filter-field"><label for="size_type">尺寸类型</label><select id="size_type"><option value="">全部类型</option><option value="半框">半框</option><option value="定性描述">定性描述</option><option value="尺寸不一">尺寸不一</option><option value="开本">开本</option><option value="开本(多组)">开本(多组)</option><option value="未著录">未著录</option><option value="版框">版框</option></select></div>
+  <div class="filter-field"><label for="sort">排序</label><select id="sort"><option value="date_desc">拍卖日期新到旧</option><option value="date_asc">拍卖日期旧到新</option><option value="price_desc">成交价高到低</option><option value="price_asc">成交价低到高</option><option value="title">按书名</option></select></div>
+  <div class="filter-actions"><button type="button" id="clear-filters">清空筛选</button></div>
+</section>
+<div id="book-grid" class="book-grid">
+<article class="book-card"
+  data-id="1"
+  data-title="东医宝鉴二十三卷（朝鲜）许浚撰"
+  data-search="东医宝鉴二十三卷（朝鲜）许浚撰 许浚 明万历四十一年（1613）朝鲜内医院刻本 中贸圣佳 万卷——名人信札、古籍善本专场 明万历四十一年（1613）朝鲜内医院刻本
+25册 皮纸 线装 31.5×21cm
+提要：是书为朝鲜御医许浚辑中国明代及之前的83种医籍，同时补充3种朝鲜医书汇编而成，大量借鉴张仲景、葛洪等名医著作的核心内容，整合了中医经典中关于经络、方剂、针灸等的理论，是对中朝医学成果的系统性汇编，结束了朝鲜民间诊疗标准混乱的状态，全书分为内景篇、外形篇、杂病篇、汤液篇及针灸篇五个部分。"
+  data-year="2025"
+  data-company="中贸圣佳"
+  data-status="未提供"
+  data-size="开本"
+  data-price=""
+  data-datetime="2025-12-17T00:00">
+  <a class="book-cover" href="items/1.html" aria-label="查看 东医宝鉴二十三卷（朝鲜）许浚撰">
+    <img src="images/kr/thumb/kr_0001.webp" alt="东医宝鉴二十三卷（朝鲜）许浚撰拍品图" loading="lazy">
+    <span class="status status--missing">未提供</span>
+  </a>
+  <div class="book-card-body">
+    <p class="book-kicker">2025-12-17</p>
+    <h3><a href="items/1.html">东医宝鉴二十三卷（朝鲜）许浚撰</a></h3>
+    <p class="book-author">许浚</p>
+    <div class="book-card-foot">
+      <span class="company">中贸圣佳</span>
+      <span class="price">未提供</span>
+    </div>
+  </div>
+</article>
+<article class="book-card"
+  data-id="2"
+  data-title="东医宝鉴二十三卷 全 〔朝鲜〕许浚著"
+  data-search="东医宝鉴二十三卷 全 〔朝鲜〕许浚著 许浚 明代高丽刻本 孔网拍卖 古籍善本专场 明代高丽刻本
+25册 皮纸
+31.4×21cm
+提要：是书目录尾刻“岁甲戌仲冬内医院校正完营重刊”，收目录二卷、内景篇四卷、外形篇四卷、杂病篇十一卷、汤液篇三卷、针灸篇一卷，由当时御医许浚、杨礼寿、金应铎、李命源等人历时十余年编撰而成。选方丰富，共收载十五类，一千四百多种药材，每方均注出处，并收录民间单方，为古代朝鲜医学集大成之作。在朝鲜，此书之地位可与中国李时珍之《本草纲目》相媲美，是极为重要的综合性中医文献。"
+  data-year="2025"
+  data-company="孔网拍卖"
+  data-status="未提供"
+  data-size="开本"
+  data-price=""
+  data-datetime="2025-07-12T00:00">
+  <a class="book-cover" href="items/2.html" aria-label="查看 东医宝鉴二十三卷 全 〔朝鲜〕许浚著">
+    <img src="images/kr/thumb/kr_0002.webp" alt="东医宝鉴二十三卷 全 〔朝鲜〕许浚著拍品图" loading="lazy">
+    <span class="status status--missing">未提供</span>
+  </a>
+  <div class="book-card-body">
+    <p class="book-kicker">2025-07-12</p>
+    <h3><a href="items/2.html">东医宝鉴二十三卷 全 〔朝鲜〕许浚著</a></h3>
+    <p class="book-author">许浚</p>
+    <div class="book-card-foot">
+      <span class="company">孔网拍卖</span>
+      <span class="price">未提供</span>
+    </div>
+  </div>
+</article>
+<article class="book-card"
+  data-id="3"
+  data-title="孔子圣迹图 朝鲜 金正穆 编"
+  data-search="孔子圣迹图 朝鲜 金正穆 编 金正穆  南京嘉宁 南京嘉宁2025古籍书画春季拍卖会 平教资料/书画信札/明版/印谱 年代：朝鲜刻本
+一册 皮纸 线装
+29.3×19.8cm
+提要：此书首有金正穆序，内收道统源流图、孔子圣像、鲁国地图、礼器图、东方圣学源流图等。线条古朴，人物表情生动，可作孔圣像研究之参考。书本开阔，保存完好，颇为难得。"
+  data-year="2025"
+  data-company="南京嘉宁"
+  data-status="未提供"
+  data-size="开本"
+  data-price=""
+  data-datetime="2025-04-20T00:00">
+  <a class="book-cover" href="items/3.html" aria-label="查看 孔子圣迹图 朝鲜 金正穆 编">
+    <img src="images/kr/thumb/kr_0003.webp" alt="孔子圣迹图 朝鲜 金正穆 编拍品图" loading="lazy">
+    <span class="status status--missing">未提供</span>
+  </a>
+  <div class="book-card-body">
+    <p class="book-kicker">2025-04-20</p>
+    <h3><a href="items/3.html">孔子圣迹图 朝鲜 金正穆 编</a></h3>
+    <p class="book-author">金正穆</p>
+    <div class="book-card-foot">
+      <span class="company">南京嘉宁</span>
+      <span class="price">未提供</span>
+    </div>
+  </div>
+</article>
+<article class="book-card"
+  data-id="4"
+  data-title="孔子圣迹图 朝鲜 金正穆 编"
+  data-search="孔子圣迹图 朝鲜 金正穆 编 金正穆  南京嘉宁 南京嘉宁2024年古籍书画春季拍卖会 沈燮元旧藏/ 明版/ 方志 年代：朝鲜刊本
+一册 皮纸 线装 29.3×19.8cm
+提要：此书首有金正穆序，内收孔子圣像、鲁国地图、礼器图、东方圣学源流图等。线条古朴，人物表情生动，可作孔圣像研究之参考。"
+  data-year="2024"
+  data-company="南京嘉宁"
+  data-status="未提供"
+  data-size="开本"
+  data-price=""
+  data-datetime="2024-04-14T00:00">
+  <a class="book-cover" href="items/4.html" aria-label="查看 孔子圣迹图 朝鲜 金正穆 编">
+    <img src="images/kr/thumb/kr_0004.webp" alt="孔子圣迹图 朝鲜 金正穆 编拍品图" loading="lazy">
+    <span class="status status--missing">未提供</span>
+  </a>
+  <div class="book-card-body">
+    <p class="book-kicker">2024-04-14</p>
+    <h3><a href="items/4.html">孔子圣迹图 朝鲜 金正穆 编</a></h3>
+    <p class="book-author">金正穆</p>
+    <div class="book-card-foot">
+      <span class="company">南京嘉宁</span>
+      <span class="price">未提供</span>
+    </div>
+  </div>
+</article>
+<article class="book-card"
+  data-id="6"
+  data-title="增补参赞秘传天机大要 二卷 〔明〕林绍周 撰 〔朝鲜〕池百源 订"
+  data-search="增补参赞秘传天机大要 二卷 〔明〕林绍周 撰 〔朝鲜〕池百源 订 〔明〕林绍周 撰 〔朝鲜〕池百源 订  海王村 2023年秋季书刊资料文物同步拍卖会 古籍善本资料专场 朝鲜刊本
+皮质 2册 线装 半框21.4×18cm
+提要：是书由明代易学大师林绍周撰写，为阴阳五行所管人事体咎的术数文献，后外传至朝鲜。拍品板面阔大，字体疏良，刻印俱佳，原签尚存。"
+  data-year="2023"
+  data-company="海王村"
+  data-status="成交"
+  data-size="半框"
+  data-price="2070.0"
+  data-datetime="2023-12-10T09:30">
+  <a class="book-cover" href="items/6.html" aria-label="查看 增补参赞秘传天机大要 二卷 〔明〕林绍周 撰 〔朝鲜〕池百源 订">
+    <img src="images/kr/thumb/kr_0006.webp" alt="增补参赞秘传天机大要 二卷 〔明〕林绍周 撰 〔朝鲜〕池百源 订拍品图" loading="lazy">
+    <span class="status status--sold">成交</span>
+  </a>
+  <div class="book-card-body">
+    <p class="book-kicker">2023-12-10 · 09:30</p>
+    <h3><a href="items/6.html">增补参赞秘传天机大要 二卷 〔明〕林绍周 撰 〔朝鲜〕池百源 订</a></h3>
+    <p class="book-author">〔明〕林绍周 撰 〔朝鲜〕池百源 订</p>
+    <div class="book-card-foot">
+      <span class="company">海王村</span>
+      <span class="price">RMB 2,070</span>
+    </div>
+  </div>
+</article>
+<article class="book-card"
+  data-id="5"
+  data-title="杜律分韵 五卷 〔朝鲜〕摛文院 编"
+  data-search="杜律分韵 五卷 〔朝鲜〕摛文院 编 摛文院 清乾隆嘉庆间（1736-1795）朝鲜内阁 铜活字本 海王村 2023年秋季书刊资料文物同步拍卖会 古籍善本资料专场 清乾隆嘉庆间（1736-1795）朝鲜内阁 铜活字本
+2册 线装 半框15.6×10.3cm
+提要：朝鲜半岛自高丽以来多有崇杜之风气，朝鲜本土辑纂刊印之杜集亦不在少数，朝鲜正祖时期摛文院奉教汇编《杜律分韵》，此种仅为诵读之本，并无名家批解，故而朝鲜文人鲜有提及。《杜律分韵》虽名不甚传，但印本有四种之多：戊午活印本、乙丑重印本、乙未岭营重印本、庚戌完营新刊本，共四种版本。而此乙丑重印本为最罕见本。此书首有墨题“按是书原版嘉庆三年戊午大字活字本是也，而此细字活字本，嘉庆五年重印也。大正五年三月十六日。于卧云台。”参见：朝鲜摛文院编《杜律分韵》版本述略。"
+  data-year="2023"
+  data-company="海王村"
+  data-status="成交"
+  data-size="半框"
+  data-price="12700.0"
+  data-datetime="2023-12-10T09:30">
+  <a class="book-cover" href="items/5.html" aria-label="查看 杜律分韵 五卷 〔朝鲜〕摛文院 编">
+    <img src="images/kr/thumb/kr_0005.webp" alt="杜律分韵 五卷 〔朝鲜〕摛文院 编拍品图" loading="lazy">
+    <span class="status status--sold">成交</span>
+  </a>
+  <div class="book-card-body">
+    <p class="book-kicker">2023-12-10 · 09:30</p>
+    <h3><a href="items/5.html">杜律分韵 五卷 〔朝鲜〕摛文院 编</a></h3>
+    <p class="book-author">摛文院</p>
+    <div class="book-card-foot">
+      <span class="company">海王村</span>
+      <span class="price">RMB 12,700</span>
+    </div>
+  </div>
+</article>
+<article class="book-card"
+  data-id="9"
+  data-title="〔朝鲜〕许浚等 撰 东医宝鉴 二十三卷 目录 二卷"
+  data-search="〔朝鲜〕许浚等 撰 东医宝鉴 二十三卷 目录 二卷 许浚 17世纪朝鲜刊本（约中国明代万历间） 海王村 2023年秋季书刊资料文物同步拍卖会 古籍善本资料专场 17世纪朝鲜刊本（约中国明代万历间）
+25册 皮纸 线装 半框24.9×18.3cm
+提要：是书为朝鲜医学集大成之作，分内景篇四卷，外形篇四卷，杂病篇十一卷，汤液篇三卷，针灸篇一卷。其中部分引用医学典籍在我国已经失传，对研究中医古文献颇有裨益。全书半叶十行，行二十一字，小字双行同，白口，双对花鱼尾，四周双边。首有万历三十九李廷龟序。序末有刊记“万历四十一年十一月日内医院奉教刊行/监校官通训大夫行内医院直长臣李希宪/通训大夫行内医院副奉事臣尹知微”。目录末镌“岁甲戌仲冬内医院校正完营重刊”大字牌记。开本宏阔，高丽皮纸印就，字体古拙。
+许浚（1546-1615），字清源，号龟岩。朝鲜名医，宣祖朝任内医院医官，1592年任御医，官至辅国崇禄大夫。后专事医学研究舆著述，历十余年，完成医学名著《东医宝鉴》。"
+  data-year="2023"
+  data-company="海王村"
+  data-status="流拍"
+  data-size="半框"
+  data-price=""
+  data-datetime="2023-07-08T09:30">
+  <a class="book-cover" href="items/9.html" aria-label="查看 〔朝鲜〕许浚等 撰 东医宝鉴 二十三卷 目录 二卷">
+    <img src="images/kr/thumb/kr_0009.webp" alt="〔朝鲜〕许浚等 撰 东医宝鉴 二十三卷 目录 二卷拍品图" loading="lazy">
+    <span class="status status--unsold">流拍</span>
+  </a>
+  <div class="book-card-body">
+    <p class="book-kicker">2023-07-08 · 09:30</p>
+    <h3><a href="items/9.html">〔朝鲜〕许浚等 撰 东医宝鉴 二十三卷 目录 二卷</a></h3>
+    <p class="book-author">许浚</p>
+    <div class="book-card-foot">
+      <span class="company">海王村</span>
+      <span class="price">流拍</span>
+    </div>
+  </div>
+</article>
+<article class="book-card"
+  data-id="8"
+  data-title="〔朝鲜〕申公 撰 笼潭集 四卷"
+  data-search="〔朝鲜〕申公 撰 笼潭集 四卷 申公 19世纪朝鲜木活字印本 海王村 2023年秋季书刊资料文物同步拍卖会 古籍善本资料专场 〔朝鲜〕皮纸
+19世纪朝鲜木活字印本 2册 线装 半框20.1×17.2cm
+提要：是为朝鲜笼潭处士申公诗文集，由其孙将遗稿梓行。申公，弱冠时以词赋名，被选于藩司入乐育斋，耻与冒参者居，即日卷归。居笼潭精岩之旁一精舍，潜心圣贤书。其诗少华，而现冲澹高古之味。"
+  data-year="2023"
+  data-company="海王村"
+  data-status="成交"
+  data-size="半框"
+  data-price="5175.0"
+  data-datetime="2023-07-08T09:30">
+  <a class="book-cover" href="items/8.html" aria-label="查看 〔朝鲜〕申公 撰 笼潭集 四卷">
+    <img src="images/kr/thumb/kr_0008.webp" alt="〔朝鲜〕申公 撰 笼潭集 四卷拍品图" loading="lazy">
+    <span class="status status--sold">成交</span>
+  </a>
+  <div class="book-card-body">
+    <p class="book-kicker">2023-07-08 · 09:30</p>
+    <h3><a href="items/8.html">〔朝鲜〕申公 撰 笼潭集 四卷</a></h3>
+    <p class="book-author">申公</p>
+    <div class="book-card-foot">
+      <span class="company">海王村</span>
+      <span class="price">RMB 5,175</span>
+    </div>
+  </div>
+</article>
+<article class="book-card"
+  data-id="7"
+  data-title="〔朝鲜〕李孟宗 撰 家礼增解 十四卷 目录 一卷"
+  data-search="〔朝鲜〕李孟宗 撰 家礼增解 十四卷 目录 一卷 李孟宗 19世纪朝鲜刊本 海王村 2023年秋季书刊资料文物同步拍卖会 古籍善本资料专场 〔朝鲜〕
+19世纪朝鲜刊本 10册 线装
+半框24.3×18.5cm
+提要：本书为朝鲜礼学著作，内有版图多幅。首刻有崇祯后三壬子年（1792）宋焕箕序，目录一卷单独成册，大开本，皮纸印就，原装。"
+  data-year="2023"
+  data-company="海王村"
+  data-status="成交"
+  data-size="半框"
+  data-price="7475.0"
+  data-datetime="2023-07-08T09:30">
+  <a class="book-cover" href="items/7.html" aria-label="查看 〔朝鲜〕李孟宗 撰 家礼增解 十四卷 目录 一卷">
+    <img src="images/kr/thumb/kr_0007.webp" alt="〔朝鲜〕李孟宗 撰 家礼增解 十四卷 目录 一卷拍品图" loading="lazy">
+    <span class="status status--sold">成交</span>
+  </a>
+  <div class="book-card-body">
+    <p class="book-kicker">2023-07-08 · 09:30</p>
+    <h3><a href="items/7.html">〔朝鲜〕李孟宗 撰 家礼增解 十四卷 目录 一卷</a></h3>
+    <p class="book-author">李孟宗</p>
+    <div class="book-card-foot">
+      <span class="company">海王村</span>
+      <span class="price">RMB 7,475</span>
+    </div>
+  </div>
+</article>
+<article class="book-card"
+  data-id="10"
+  data-title="〔朝鲜〕李退溪 编绘圣学十图"
+  data-search="〔朝鲜〕李退溪 编绘圣学十图 李退溪  海王村 2022年春季书刊资料文物拍卖会 古籍善本专场 编绘圣学十图 皮纸
+朝鲜刊印 10张 散页 75×47.5cm
+提要：内收“太极图”、“西铭图”、“小学图”、“大学图”、“白鹿洞规图”、“心统性情图”、“仁说图”、“心学图”、“敬斋箴图”、“夙兴夜寐箴图”。此为朝鲜李氏王朝时期思想家李退溪在宣祖元年（1568）编绘而成。李滉，字退溪，有“海东朱子”之誉。此图可谓其晚年深思熟虑、提纲挈领的结晶，也是他体认圣学大端、心法至要的心得。退溪独以图的形式，既示人以圣学入道之门，亦给人以简明易懂的启迪。在儒学思想史上产生了持久而深远的影响。此刻本颇为少见，十幅完整无缺，品相上佳。"
+  data-year="2022"
+  data-company="海王村"
+  data-status="成交"
+  data-size="开本"
+  data-price="11500.0"
+  data-datetime="2022-08-27T00:00">
+  <a class="book-cover" href="items/10.html" aria-label="查看 〔朝鲜〕李退溪 编绘圣学十图">
+    <img src="images/kr/thumb/kr_0010.webp" alt="〔朝鲜〕李退溪 编绘圣学十图拍品图" loading="lazy">
+    <span class="status status--sold">成交</span>
+  </a>
+  <div class="book-card-body">
+    <p class="book-kicker">2022-08-27</p>
+    <h3><a href="items/10.html">〔朝鲜〕李退溪 编绘圣学十图</a></h3>
+    <p class="book-author">李退溪</p>
+    <div class="book-card-foot">
+      <span class="company">海王村</span>
+      <span class="price">RMB 11,500</span>
+    </div>
+  </div>
+</article>
+<article class="book-card"
+  data-id="11"
+  data-title="许浚等撰 朝鲜 东医宝鉴二十三卷"
+  data-search="许浚等撰 朝鲜 东医宝鉴二十三卷 许浚  中贸圣佳 中贸圣佳2022春季拍卖会 万卷——名人信札 古籍善本专场 朝鲜刻本
+25册 线装 皮纸 29.7×20cm
+提要：朝鲜李朝阳平君许浚（1546-1615），字清源，号龟岩，名医，宣祖朝任内医，为王室医病，屡有功。1592年任御医，后为扈尘功臣三等。历十馀年，完成医学名著《东医宝鉴》。书分内景四卷，外形四卷，杂病十一卷，汤液三卷，针灸一卷。为当时朝鲜医学集大成之作。目录尾刻“岁甲戌仲冬内医院校正完营重刊”，大开本，皮纸印，原装。"
+  data-year="2022"
+  data-company="中贸圣佳"
+  data-status="流拍"
+  data-size="开本"
+  data-price=""
+  data-datetime="2022-07-27T10:00">
+  <a class="book-cover" href="items/11.html" aria-label="查看 许浚等撰 朝鲜 东医宝鉴二十三卷">
+    <img src="images/kr/thumb/kr_0011.webp" alt="许浚等撰 朝鲜 东医宝鉴二十三卷拍品图" loading="lazy">
+    <span class="status status--unsold">流拍</span>
+  </a>
+  <div class="book-card-body">
+    <p class="book-kicker">2022-07-27 · 10:00</p>
+    <h3><a href="items/11.html">许浚等撰 朝鲜 东医宝鉴二十三卷</a></h3>
+    <p class="book-author">许浚</p>
+    <div class="book-card-foot">
+      <span class="company">中贸圣佳</span>
+      <span class="price">流拍</span>
+    </div>
+  </div>
+</article>
+<article class="book-card"
+  data-id="12"
+  data-title="朝鲜瓢活字玉纂"
+  data-search="朝鲜瓢活字玉纂 ——  景星麟凤 大唐西市2020年秋季暨2021年迎新艺术品拍卖会 稽古游楮—古籍善本·金石碑帖专场（下） 1册 线装 26×19cm
+提要：朝鲜瓢活字是用多年老葫芦皮所制，因其老葫芦皮年代久远，皮已近乎木质。由于材质的限制，自然不会如铜、铅活字那般耐用，所以瓢活字本一般印数不多，传本很少。
+活字版印本的七种特征：
+1、活字本在栏线四角的横线竖线衔接处，连接的不是那样严密无缝，多数有隔开的缝隙。
+2、活字是一字一刻。
+3、墨色轻重（浓淡）不均。
+4、活字与活字的笔画之间绝不交，每字一刻，自为整体。
+5、书口上下栏线整齐。
+6、活字印本无断版裂版现象。
+7、行格界线时有时无。"
+  data-year="2021"
+  data-company="景星麟凤"
+  data-status="未提供"
+  data-size="开本"
+  data-price=""
+  data-datetime="2021-01-10T13:00">
+  <a class="book-cover" href="items/12.html" aria-label="查看 朝鲜瓢活字玉纂">
+    <img src="images/kr/thumb/kr_0012.webp" alt="朝鲜瓢活字玉纂拍品图" loading="lazy">
+    <span class="status status--missing">未提供</span>
+  </a>
+  <div class="book-card-body">
+    <p class="book-kicker">2021-01-10 · 13:00</p>
+    <h3><a href="items/12.html">朝鲜瓢活字玉纂</a></h3>
+    <p class="book-author">——</p>
+    <div class="book-card-foot">
+      <span class="company">景星麟凤</span>
+      <span class="price">未提供</span>
+    </div>
+  </div>
+</article>
+<article class="book-card"
+  data-id="13"
+  data-title="御定朱书百选 六卷（朝鲜内府奎章阁藏）"
+  data-search="御定朱书百选 六卷（朝鲜内府奎章阁藏） ——  海王村 第八十八期大众收藏书刊资料文物拍卖会 第八十八期大众收藏书刊资料文物专场 朝鲜皮纸 钤印：奎章之宝
+朝鲜内阁铜活字印本
+3册 线装
+提要：是书开本巨阔，保存完好，品佳。牌记刻“甲寅内阁活印”。"
+  data-year="2020"
+  data-company="海王村"
+  data-status="成交"
+  data-size="定性描述"
+  data-price="23000.0"
+  data-datetime="2020-09-20T09:30">
+  <a class="book-cover" href="items/13.html" aria-label="查看 御定朱书百选 六卷（朝鲜内府奎章阁藏）">
+    <img src="images/kr/thumb/kr_0013.webp" alt="御定朱书百选 六卷（朝鲜内府奎章阁藏）拍品图" loading="lazy">
+    <span class="status status--sold">成交</span>
+  </a>
+  <div class="book-card-body">
+    <p class="book-kicker">2020-09-20 · 09:30</p>
+    <h3><a href="items/13.html">御定朱书百选 六卷（朝鲜内府奎章阁藏）</a></h3>
+    <p class="book-author">——</p>
+    <div class="book-card-foot">
+      <span class="company">海王村</span>
+      <span class="price">RMB 23,000</span>
+    </div>
+  </div>
+</article>
+<article class="book-card"
+  data-id="14"
+  data-title="许浚 撰 朝鲜 东医宝鉴二十三卷目录二卷"
+  data-search="许浚 撰 朝鲜 东医宝鉴二十三卷目录二卷 许浚  中贸圣佳 2019秋季艺术品拍卖会 万卷——名人信札 古籍善本专场 清刻本
+四函二十五册 23.4×14.6cm
+提要：拍品老装未衬，原装原函，品相上佳。该书虽是朝鲜人所撰，但其抄录的却大多属于中医典籍，反映的也都是中医医学思想，在整个亚洲颇具影响。"
+  data-year="2019"
+  data-company="中贸圣佳"
+  data-status="流拍"
+  data-size="开本"
+  data-price=""
+  data-datetime="2019-12-01T09:30">
+  <a class="book-cover" href="items/14.html" aria-label="查看 许浚 撰 朝鲜 东医宝鉴二十三卷目录二卷">
+    <img src="images/kr/thumb/kr_0014.webp" alt="许浚 撰 朝鲜 东医宝鉴二十三卷目录二卷拍品图" loading="lazy">
+    <span class="status status--unsold">流拍</span>
+  </a>
+  <div class="book-card-body">
+    <p class="book-kicker">2019-12-01 · 09:30</p>
+    <h3><a href="items/14.html">许浚 撰 朝鲜 东医宝鉴二十三卷目录二卷</a></h3>
+    <p class="book-author">许浚</p>
+    <div class="book-card-foot">
+      <span class="company">中贸圣佳</span>
+      <span class="price">流拍</span>
+    </div>
+  </div>
+</article>
+<article class="book-card"
+  data-id="15"
+  data-title="朝鲜活字本标本"
+  data-search="朝鲜活字本标本 ——  北京伍伦 2019年春季文物艺术品拍卖会 写经、碑帖、信札专场 1册 21张 尺寸不一
+提要：1966年，美国洛杉矶Dawson书店制作了300部限量版活页装帧的《朝鲜活字本标本》。作者Melvin P. McGovern曾在韩国担任美军教育部主任。他在韩国及日本生活长达20年之久，致力于搜集、研究朝鲜、日本的古代印刷术。
+此为McGovern自藏本，每页都经过专业甄选。内收明清以来朝鲜活字本单页，是研究亚洲印刷史必不可少的珍稀标本。
+标的清单：
+1.《新编古今事文类聚》卷之七十三 甲辰字
+2.《纂注分类杜诗》卷之四 训练都监字
+3.《朱文公校昌黎先生集》卷之三 训练都监字
+4.《资治通鉴节要续编》卷之六 甲寅字
+5.《十九史略统考》卷之三 甲寅字
+6.《俪语抄卷》之二 木活字
+7.《资治通鉴纲目》卷八 韩构字
+8.《世说新语补》卷之三 显宗实录字
+9.《大学章句大全》 戊申字
+10.《小学谚解》卷之三 戊申字
+11.《书传谚解》卷之三 木活字
+12.《明斋先生遗稿》别卷之四 芸阁印书体字
+13.《诗选》卷二 芸阁笔书体字
+14.《列圣志状通记》卷之三 显宗实录字
+15.《五伦行实图》卷四、五 整理字
+16.《六律分韵》卷七 整理字
+17.《经史集说》卷之五 木活字、陶活字
+18.《东部联吟集》 木活字
+19.《前汉书》卷二十四 甲寅字
+20.《史记》卷十一 木活字
+21.《钦定重刻淳化阁帖释文》卷二 木活字"
+  data-year="2019"
+  data-company="北京伍伦"
+  data-status="成交"
+  data-size="尺寸不一"
+  data-price="57500.0"
+  data-datetime="2019-07-14T15:00">
+  <a class="book-cover" href="items/15.html" aria-label="查看 朝鲜活字本标本">
+    <img src="images/kr/thumb/kr_0015.webp" alt="朝鲜活字本标本拍品图" loading="lazy">
+    <span class="status status--sold">成交</span>
+  </a>
+  <div class="book-card-body">
+    <p class="book-kicker">2019-07-14 · 15:00</p>
+    <h3><a href="items/15.html">朝鲜活字本标本</a></h3>
+    <p class="book-author">——</p>
+    <div class="book-card-foot">
+      <span class="company">北京伍伦</span>
+      <span class="price">RMB 57,500</span>
+    </div>
+  </div>
+</article>
+<article class="book-card"
+  data-id="16"
+  data-title="端木蕻良藏域外古籍四种十一册，含朝鲜刻本《雅诵》一册；日本刻本《江村消夏录》五册；日本刻本《刘向新序纂注》四册；珂罗版《日本名笔全集》一册"
+  data-search="端木蕻良藏域外古籍四种十一册，含朝鲜刻本《雅诵》一册；日本刻本《江村消夏录》五册；日本刻本《刘向新序纂注》四册；珂罗版《日本名笔全集》一册 —— 日本文政五年（1822） 日本宽政十二年（1800） 广东崇正 2019年春季拍卖会 红楼旧梦·端木蕻良旧藏（二） 纸本
+33×21cm；26.5×17.5cm；26×18cm；30×21cm
+说明：日本文政五年（1822）刻本《刘向新序纂注》四册全。日本宽政十二年（1800）刻《江村消夏录》存五册，缺首册；朝鲜刻本《雅诵》存卷五至卷八，一册；近现代珂罗版《日本名笔全集》一册。"
+  data-year="2019"
+  data-company="广东崇正"
+  data-status="成交"
+  data-size="开本(多组)"
+  data-price="4600.0"
+  data-datetime="2019-05-22T19:30">
+  <a class="book-cover" href="items/16.html" aria-label="查看 端木蕻良藏域外古籍四种十一册，含朝鲜刻本《雅诵》一册；日本刻本《江村消夏录》五册；日本刻本《刘向新序纂注》四册；珂罗版《日本名笔全集》一册">
+    <img src="images/kr/thumb/kr_0016.webp" alt="端木蕻良藏域外古籍四种十一册，含朝鲜刻本《雅诵》一册；日本刻本《江村消夏录》五册；日本刻本《刘向新序纂注》四册；珂罗版《日本名笔全集》一册拍品图" loading="lazy">
+    <span class="status status--sold">成交</span>
+  </a>
+  <div class="book-card-body">
+    <p class="book-kicker">2019-05-22 · 19:30</p>
+    <h3><a href="items/16.html">端木蕻良藏域外古籍四种十一册，含朝鲜刻本《雅诵》一册；日本刻本《江村消夏录》五册；日本刻本《刘向新序纂注》四册；珂罗版《日本名笔全集》一册</a></h3>
+    <p class="book-author">——</p>
+    <div class="book-card-foot">
+      <span class="company">广东崇正</span>
+      <span class="price">RMB 4,600</span>
+    </div>
+  </div>
+</article>
+<article class="book-card"
+  data-id="17"
+  data-title="惩毖录十六卷 杂记一卷（朝鲜） 柳成龙 撰"
+  data-search="惩毖录十六卷 杂记一卷（朝鲜） 柳成龙 撰 柳成龙  江苏两汉 江苏两汉·四礼堂苏州古籍善本春季拍卖会 古籍善本 年代：高丽刻本
+六册 高丽皮纸 线装 31.3×20cm
+提要：是书为柳成龙辞官回乡后亲自整理撰写的记载壬辰和丁酉倭乱的重要史料，较为深入地记载了朝鲜的战守防备、明朝援军的主要战役、围绕日、明议和问题以及李舜臣水军的事迹等。其史料价值极高。
+西崖柳成龙，祖籍朝鲜安东义城，字而见，号西压，谥号文忠。曾师从号称“海东朱子”的退溪李混。为朝鲜壬辰倭乱时期负责抗倭的主要政治家和军事家。"
+  data-year="2019"
+  data-company="江苏两汉"
+  data-status="成交"
+  data-size="开本"
+  data-price="4025.0"
+  data-datetime="2019-05-12T09:30">
+  <a class="book-cover" href="items/17.html" aria-label="查看 惩毖录十六卷 杂记一卷（朝鲜） 柳成龙 撰">
+    <img src="images/kr/thumb/kr_0017.webp" alt="惩毖录十六卷 杂记一卷（朝鲜） 柳成龙 撰拍品图" loading="lazy">
+    <span class="status status--sold">成交</span>
+  </a>
+  <div class="book-card-body">
+    <p class="book-kicker">2019-05-12 · 09:30</p>
+    <h3><a href="items/17.html">惩毖录十六卷 杂记一卷（朝鲜） 柳成龙 撰</a></h3>
+    <p class="book-author">柳成龙</p>
+    <div class="book-card-foot">
+      <span class="company">江苏两汉</span>
+      <span class="price">RMB 4,025</span>
+    </div>
+  </div>
+</article>
+<article class="book-card"
+  data-id="18"
+  data-title="明 李氏朝鲜内府旧藏 二程全书"
+  data-search="明 李氏朝鲜内府旧藏 二程全书 ——  观古国际 2018秋季文物艺术品拍卖会 观古·蕓香-中国古籍善本专场 纸本 十六册
+25.5×16cm"
+  data-year="2018"
+  data-company="观古国际"
+  data-status="成交"
+  data-size="开本"
+  data-price="89700.0"
+  data-datetime="2018-12-08T10:00">
+  <a class="book-cover" href="items/18.html" aria-label="查看 明 李氏朝鲜内府旧藏 二程全书">
+    <img src="images/kr/thumb/kr_0018.webp" alt="明 李氏朝鲜内府旧藏 二程全书拍品图" loading="lazy">
+    <span class="status status--sold">成交</span>
+  </a>
+  <div class="book-card-body">
+    <p class="book-kicker">2018-12-08 · 10:00</p>
+    <h3><a href="items/18.html">明 李氏朝鲜内府旧藏 二程全书</a></h3>
+    <p class="book-author">——</p>
+    <div class="book-card-foot">
+      <span class="company">观古国际</span>
+      <span class="price">RMB 89,700</span>
+    </div>
+  </div>
+</article>
+<article class="book-card"
+  data-id="19"
+  data-title="许浚 等 撰 朝鲜 东医宝鉴二十二卷"
+  data-search="许浚 等 撰 朝鲜 东医宝鉴二十二卷 许浚  中贸圣佳 2018迎春四季拍卖会 古籍善本 清刻本
+2函22册 23.6×14.6cm
+线装
+提要：此拍品含杂病篇十一卷、汤液篇三卷、内景篇四卷、外形篇四卷，"
+  data-year="2018"
+  data-company="中贸圣佳"
+  data-status="成交"
+  data-size="开本"
+  data-price="20700.0"
+  data-datetime="2018-05-19T09:30">
+  <a class="book-cover" href="items/19.html" aria-label="查看 许浚 等 撰 朝鲜 东医宝鉴二十二卷">
+    <img src="images/kr/thumb/kr_0019.webp" alt="许浚 等 撰 朝鲜 东医宝鉴二十二卷拍品图" loading="lazy">
+    <span class="status status--sold">成交</span>
+  </a>
+  <div class="book-card-body">
+    <p class="book-kicker">2018-05-19 · 09:30</p>
+    <h3><a href="items/19.html">许浚 等 撰 朝鲜 东医宝鉴二十二卷</a></h3>
+    <p class="book-author">许浚</p>
+    <div class="book-card-foot">
+      <span class="company">中贸圣佳</span>
+      <span class="price">RMB 20,700</span>
+    </div>
+  </div>
+</article>
+<article class="book-card"
+  data-id="21"
+  data-title="朝鲜刻本 《天机大要》上下卷"
+  data-search="朝鲜刻本 《天机大要》上下卷 ——  中鸿信 中鸿信20周年庆典拍卖会 古籍文献—红色文献、版画专场 二册 29×19cm
+是书封皮有毛笔书写天机大要四字，并以乾坤分上下两册，内容为洛书、易经之类的卜书，字体行格疏朗，刻印精良。"
+  data-year="2018"
+  data-company="中鸿信"
+  data-status="成交"
+  data-size="开本"
+  data-price="6900.0"
+  data-datetime="2018-01-05T12:30">
+  <a class="book-cover" href="items/21.html" aria-label="查看 朝鲜刻本 《天机大要》上下卷">
+    <img src="images/kr/thumb/kr_0021.webp" alt="朝鲜刻本 《天机大要》上下卷拍品图" loading="lazy">
+    <span class="status status--sold">成交</span>
+  </a>
+  <div class="book-card-body">
+    <p class="book-kicker">2018-01-05 · 12:30</p>
+    <h3><a href="items/21.html">朝鲜刻本 《天机大要》上下卷</a></h3>
+    <p class="book-author">——</p>
+    <div class="book-card-foot">
+      <span class="company">中鸿信</span>
+      <span class="price">RMB 6,900</span>
+    </div>
+  </div>
+</article>
+<article class="book-card"
+  data-id="20"
+  data-title="朝鲜课本 《诗传大全》二十卷"
+  data-search="朝鲜课本 《诗传大全》二十卷 ——  中鸿信 中鸿信20周年庆典拍卖会 古籍文献—红色文献、版画专场 一夹板十册 32×22cm
+拍品描述：“杨星吾日本访书之印”
+是书开本极阔,通篇字体写刻古拙雅丽,行格疏朗,印制精良,书衣为高丽暗花黄茧纸,高贵典雅。"
+  data-year="2018"
+  data-company="中鸿信"
+  data-status="成交"
+  data-size="开本"
+  data-price="13800.0"
+  data-datetime="2018-01-05T12:30">
+  <a class="book-cover" href="items/20.html" aria-label="查看 朝鲜课本 《诗传大全》二十卷">
+    <img src="images/kr/thumb/kr_0020.webp" alt="朝鲜课本 《诗传大全》二十卷拍品图" loading="lazy">
+    <span class="status status--sold">成交</span>
+  </a>
+  <div class="book-card-body">
+    <p class="book-kicker">2018-01-05 · 12:30</p>
+    <h3><a href="items/20.html">朝鲜课本 《诗传大全》二十卷</a></h3>
+    <p class="book-author">——</p>
+    <div class="book-card-foot">
+      <span class="company">中鸿信</span>
+      <span class="price">RMB 13,800</span>
+    </div>
+  </div>
+</article>
+<article class="book-card"
+  data-id="58"
+  data-title="许容篆 胡介祉 辑 清 李氏朝鲜内府旧藏谷园印谱六卷"
+  data-search="许容篆 胡介祉 辑 清 李氏朝鲜内府旧藏谷园印谱六卷 许容篆 胡介祉 辑 清康熙二十五年（1686）刻钤印本 中贸圣佳 2017春季艺术品拍卖会 万卷——古籍善本专场 开化榜纸
+拍品描述
+钤印：宣赐之记，胡介祉印，介祉之印，一字循斋
+著录：《中国古籍善本总目》子部艺术P937
+清康熙二十五年（1686）刻钤印本
+1函3册
+线装
+提要：据《中国印学年表》，此谱清康熙二十五年集成，有四册、六册、九册本，一即四卷、六卷、九卷之别。此本六卷全，三册装，五眼订线，有明显域外风格，序首钤李氏朝鲜内府“宣赐之记”朱文方章，应为朝鲜官藏旧物。据《中国古籍善本总目》，国内公藏六卷本仅见三家，可知其传本稀少，又序末、卷前均有编者名章，当是集成钤赠之物。"
+  data-year="2017"
+  data-company="中贸圣佳"
+  data-status="流拍"
+  data-size="未著录"
+  data-price=""
+  data-datetime="2017-06-19T09:30">
+  <a class="book-cover" href="items/58.html" aria-label="查看 许容篆 胡介祉 辑 清 李氏朝鲜内府旧藏谷园印谱六卷">
+    <img src="images/kr/thumb/kr_0058.webp" alt="许容篆 胡介祉 辑 清 李氏朝鲜内府旧藏谷园印谱六卷拍品图" loading="lazy">
+    <span class="status status--unsold">流拍</span>
+  </a>
+  <div class="book-card-body">
+    <p class="book-kicker">2017-06-19 · 09:30</p>
+    <h3><a href="items/58.html">许容篆 胡介祉 辑 清 李氏朝鲜内府旧藏谷园印谱六卷</a></h3>
+    <p class="book-author">许容篆 胡介祉 辑</p>
+    <div class="book-card-foot">
+      <span class="company">中贸圣佳</span>
+      <span class="price">流拍</span>
+    </div>
+  </div>
+</article>
+<article class="book-card"
+  data-id="22"
+  data-title="顺治序本《御注孝经》朝鲜刻本高丽皮纸线装一册"
+  data-search="顺治序本《御注孝经》朝鲜刻本高丽皮纸线装一册 ——  广东崇正 2016年秋季拍卖会 古逸清芬·古籍、信札、善本 28×17.5cm 拍场仅见。高丽刻本（约清初时期）"
+  data-year="2016"
+  data-company="广东崇正"
+  data-status="流拍"
+  data-size="开本"
+  data-price=""
+  data-datetime="2016-12-11T09:30">
+  <a class="book-cover" href="items/22.html" aria-label="查看 顺治序本《御注孝经》朝鲜刻本高丽皮纸线装一册">
+    <img src="images/kr/thumb/kr_0022.webp" alt="顺治序本《御注孝经》朝鲜刻本高丽皮纸线装一册拍品图" loading="lazy">
+    <span class="status status--unsold">流拍</span>
+  </a>
+  <div class="book-card-body">
+    <p class="book-kicker">2016-12-11 · 09:30</p>
+    <h3><a href="items/22.html">顺治序本《御注孝经》朝鲜刻本高丽皮纸线装一册</a></h3>
+    <p class="book-author">——</p>
+    <div class="book-card-foot">
+      <span class="company">广东崇正</span>
+      <span class="price">流拍</span>
+    </div>
+  </div>
+</article>
+<article class="book-card"
+  data-id="23"
+  data-title="古董朝鲜木版画地图"
+  data-search="古董朝鲜木版画地图 ——  美国蔡以声 亚洲及国际精品拍卖会 亚洲及国际精品专场 ANTIQUE KOREAN WOODBLOCK PRINT MAP
+Antique woodblock map on paper； depicting Korea， meticulously notated with inscriptions； 19th Century
+古代韩国木版印刷地图
+手绘的古旧木版地图；描绘朝鲜半岛，附有详尽的注释和题字；19世纪作品"
+  data-year="2016"
+  data-company="美国蔡以声"
+  data-status="未提供"
+  data-size="未著录"
+  data-price=""
+  data-datetime="2016-11-20T11:00">
+  <a class="book-cover" href="items/23.html" aria-label="查看 古董朝鲜木版画地图">
+    <img src="images/kr/thumb/kr_0023.webp" alt="古董朝鲜木版画地图拍品图" loading="lazy">
+    <span class="status status--missing">未提供</span>
+  </a>
+  <div class="book-card-body">
+    <p class="book-kicker">2016-11-20 · 11:00</p>
+    <h3><a href="items/23.html">古董朝鲜木版画地图</a></h3>
+    <p class="book-author">——</p>
+    <div class="book-card-foot">
+      <span class="company">美国蔡以声</span>
+      <span class="price">未提供</span>
+    </div>
+  </div>
+</article>
+<article class="book-card"
+  data-id="24"
+  data-title="游轩先生集四卷附录一卷年谱一卷（朝鲜）丁熿撰"
+  data-search="游轩先生集四卷附录一卷年谱一卷（朝鲜）丁熿撰 丁熿 自查：1821-1851 北京卓德 2013年夏季艺术品拍卖会 古籍善本暨书画专场 朝鲜旧刻本
+三册
+提要：丁熿，字季悔，号游轩。朝鲜名臣，生当明正嘉年间。此其后裔所刻，以明代为正朔，故其刊雕之时约当我国嘉道间，而其署年仍以崇祯八十八年纪年。写刊古朴而不失秀雅，桑皮纸，墨色浓郁，书品宽大，为朝鲜私家刻本之精品，品相极佳。《中国所藏高丽古籍综录》未见著录。
+开本：30.7×19.3cm"
+  data-year="2013"
+  data-company="北京卓德"
+  data-status="未提供"
+  data-size="开本"
+  data-price=""
+  data-datetime="2013-09-06T13:30">
+  <a class="book-cover" href="items/24.html" aria-label="查看 游轩先生集四卷附录一卷年谱一卷（朝鲜）丁熿撰">
+    <img src="images/kr/thumb/kr_0024.webp" alt="游轩先生集四卷附录一卷年谱一卷（朝鲜）丁熿撰拍品图" loading="lazy">
+    <span class="status status--missing">未提供</span>
+  </a>
+  <div class="book-card-body">
+    <p class="book-kicker">2013-09-06 · 13:30</p>
+    <h3><a href="items/24.html">游轩先生集四卷附录一卷年谱一卷（朝鲜）丁熿撰</a></h3>
+    <p class="book-author">丁熿</p>
+    <div class="book-card-foot">
+      <span class="company">北京卓德</span>
+      <span class="price">未提供</span>
+    </div>
+  </div>
+</article>
+<article class="book-card"
+  data-id="25"
+  data-title="明 朝鲜版本经书类抄本三册"
+  data-search="明 朝鲜版本经书类抄本三册 —— 明 上海崇源 2013年春拍艺术品拍卖会 水墨纸本 册页
+25.2×18cm"
+  data-year="2013"
+  data-company="上海崇源"
+  data-status="未提供"
+  data-size="开本"
+  data-price=""
+  data-datetime="2013-06-07T13:30">
+  <a class="book-cover" href="items/25.html" aria-label="查看 明 朝鲜版本经书类抄本三册">
+    <img src="images/kr/thumb/kr_0025.webp" alt="明 朝鲜版本经书类抄本三册拍品图" loading="lazy">
+    <span class="status status--missing">未提供</span>
+  </a>
+  <div class="book-card-body">
+    <p class="book-kicker">2013-06-07 · 13:30</p>
+    <h3><a href="items/25.html">明 朝鲜版本经书类抄本三册</a></h3>
+    <p class="book-author">——</p>
+    <div class="book-card-foot">
+      <span class="company">上海崇源</span>
+      <span class="price">未提供</span>
+    </div>
+  </div>
+</article>
+<article class="book-card"
+  data-id="26"
+  data-title="朝鲜·许浚 著 东医宝鉴"
+  data-search="朝鲜·许浚 著 东医宝鉴 许浚 （1613年）正式刊行 上海鸿海 壬辰年秋季艺术品拍卖会 文苑英华——书画文献碑版专场 朝鲜刻本
+皮纸 线装存一册
+说明：《东医宝鉴》是朝鲜古代药学史上的巨著，作者是朝鲜宣祖及光海君时代的许浚，于光海君2年（1610年）撰成，三年后（光海君5年）（1613年）正式刊行。
+34×22cm"
+  data-year="2013"
+  data-company="上海鸿海"
+  data-status="未提供"
+  data-size="开本"
+  data-price=""
+  data-datetime="2013-01-15T10:00">
+  <a class="book-cover" href="items/26.html" aria-label="查看 朝鲜·许浚 著 东医宝鉴">
+    <img src="images/kr/thumb/kr_0026.webp" alt="朝鲜·许浚 著 东医宝鉴拍品图" loading="lazy">
+    <span class="status status--missing">未提供</span>
+  </a>
+  <div class="book-card-body">
+    <p class="book-kicker">2013-01-15 · 10:00</p>
+    <h3><a href="items/26.html">朝鲜·许浚 著 东医宝鉴</a></h3>
+    <p class="book-author">许浚</p>
+    <div class="book-card-foot">
+      <span class="company">上海鸿海</span>
+      <span class="price">未提供</span>
+    </div>
+  </div>
+</article>
+<article class="book-card"
+  data-id="27"
+  data-title="朝鲜丁熿撰 游轩先生集四卷附录一卷年谱一卷"
+  data-search="朝鲜丁熿撰 游轩先生集四卷附录一卷年谱一卷 丁熿 清早期 北京保利 2012秋季拍卖会 “广韵楼”藏珍贵古籍善本 朝鲜刻本
+3册 高丽皮纸本
+提要：是书开本大，高丽皮纸初刊初印，首有序文，写于明崇祯后八十八年，则此书刻板当为清早期。字体圆润瑰丽，品相保存上佳，据文献性。
+21.4×15.1cm"
+  data-year="2012"
+  data-company="北京保利"
+  data-status="流拍"
+  data-size="开本"
+  data-price=""
+  data-datetime="2012-12-07T10:00">
+  <a class="book-cover" href="items/27.html" aria-label="查看 朝鲜丁熿撰 游轩先生集四卷附录一卷年谱一卷">
+    <img src="images/kr/thumb/kr_0027.webp" alt="朝鲜丁熿撰 游轩先生集四卷附录一卷年谱一卷拍品图" loading="lazy">
+    <span class="status status--unsold">流拍</span>
+  </a>
+  <div class="book-card-body">
+    <p class="book-kicker">2012-12-07 · 10:00</p>
+    <h3><a href="items/27.html">朝鲜丁熿撰 游轩先生集四卷附录一卷年谱一卷</a></h3>
+    <p class="book-author">丁熿</p>
+    <div class="book-card-foot">
+      <span class="company">北京保利</span>
+      <span class="price">流拍</span>
+    </div>
+  </div>
+</article>
+<article class="book-card"
+  data-id="29"
+  data-title="朝鲜李承根撰 至乐窝遗稿六卷"
+  data-search="朝鲜李承根撰 至乐窝遗稿六卷 李承根  北京保利 2012秋季拍卖会 古籍文献名家翰墨、西文经典、影像及艺术品图书 朝鲜活字本
+高丽皮纸 高丽皮纸本
+提要：收李周冕诗、书、祭文、行状、记、墓志等六卷。是书朝鲜活字印刷，十行二十字白口，四周双边，单花鱼尾，开本敞阔，有铜活字影迹。李周冕，朝鲜大韩帝国高宗时期任朝鲜忠清北道观察府主事。李承根为其子。
+21×17cm"
+  data-year="2012"
+  data-company="北京保利"
+  data-status="流拍"
+  data-size="开本"
+  data-price=""
+  data-datetime="2012-12-06T10:00">
+  <a class="book-cover" href="items/29.html" aria-label="查看 朝鲜李承根撰 至乐窝遗稿六卷">
+    <img src="images/kr/thumb/kr_0029.webp" alt="朝鲜李承根撰 至乐窝遗稿六卷拍品图" loading="lazy">
+    <span class="status status--unsold">流拍</span>
+  </a>
+  <div class="book-card-body">
+    <p class="book-kicker">2012-12-06 · 10:00</p>
+    <h3><a href="items/29.html">朝鲜李承根撰 至乐窝遗稿六卷</a></h3>
+    <p class="book-author">李承根</p>
+    <div class="book-card-foot">
+      <span class="company">北京保利</span>
+      <span class="price">流拍</span>
+    </div>
+  </div>
+</article>
+<article class="book-card"
+  data-id="28"
+  data-title="朝鲜许浚等著 东医宝鉴"
+  data-search="朝鲜许浚等著 东医宝鉴 许浚 清乾隆癸未年（1763）刻本 北京保利 2012秋季拍卖会 古籍文献名家翰墨、西文经典、影像及艺术品图书 清乾隆癸未年（1763）刻本
+2函24册 白纸
+提要：《东医宝鉴》一书分内经篇﹝内科﹞、外形篇﹝外科﹞、杂病篇、汤液篇﹝药学﹞、针灸篇五大部分。内经编：精、气、肾、血、津液等和五脏六腑的功能；外形编：可见部位的解剖、生理、病理学现象和相关疾病；杂病编：诊察法和病因，不包括在内经编和外形编的各种疾病、妇产科病和小儿科病；汤药编：当时用的各种汤剂；针灸编：针法和灸法。是书首有书牌，总目二卷前有乾隆三十一年序文一段，书原装帧保存，品相佳。
+25.2×15cm"
+  data-year="2012"
+  data-company="北京保利"
+  data-status="流拍"
+  data-size="开本"
+  data-price=""
+  data-datetime="2012-12-06T10:00">
+  <a class="book-cover" href="items/28.html" aria-label="查看 朝鲜许浚等著 东医宝鉴">
+    <img src="images/kr/thumb/kr_0028.webp" alt="朝鲜许浚等著 东医宝鉴拍品图" loading="lazy">
+    <span class="status status--unsold">流拍</span>
+  </a>
+  <div class="book-card-body">
+    <p class="book-kicker">2012-12-06 · 10:00</p>
+    <h3><a href="items/28.html">朝鲜许浚等著 东医宝鉴</a></h3>
+    <p class="book-author">许浚</p>
+    <div class="book-card-foot">
+      <span class="company">北京保利</span>
+      <span class="price">流拍</span>
+    </div>
+  </div>
+</article>
+<article class="book-card"
+  data-id="30"
+  data-title="东医宝鉴二十卷（朝鲜）许浚撰"
+  data-search="东医宝鉴二十卷（朝鲜）许浚撰 许浚 清乾隆三十一年（1766）刻本 北京卓德 2012年夏季古籍专场拍卖会 古籍善本专场 清乾隆三十一年（1766）刻本
+五函二十册
+提要：为朝鲜人所著的重要中医学著作，拍品为此书的第一个中国刻本。
+开本：21.1×13.1cm.
+半框：17.2×12.3cm."
+  data-year="2012"
+  data-company="北京卓德"
+  data-status="成交"
+  data-size="开本"
+  data-price="4830.0"
+  data-datetime="2012-09-25T10:00">
+  <a class="book-cover" href="items/30.html" aria-label="查看 东医宝鉴二十卷（朝鲜）许浚撰">
+    <img src="images/kr/thumb/kr_0030.webp" alt="东医宝鉴二十卷（朝鲜）许浚撰拍品图" loading="lazy">
+    <span class="status status--sold">成交</span>
+  </a>
+  <div class="book-card-body">
+    <p class="book-kicker">2012-09-25 · 10:00</p>
+    <h3><a href="items/30.html">东医宝鉴二十卷（朝鲜）许浚撰</a></h3>
+    <p class="book-author">许浚</p>
+    <div class="book-card-foot">
+      <span class="company">北京卓德</span>
+      <span class="price">RMB 4,830</span>
+    </div>
+  </div>
+</article>
+<article class="book-card"
+  data-id="31"
+  data-title="胡广 朝鲜纯祖20年（1820） 周易传义大全二十四卷"
+  data-search="胡广 朝鲜纯祖20年（1820） 周易传义大全二十四卷 —— 朝鲜纯祖20年（1820） 北京保利 2011年秋季拍卖会 古籍文献名家翰墨 明胡广等编 周易传义大全二十四卷
+内阁刻本
+14册 高丽皮纸
+提要：是书开本阔大，朝鲜装帧，初刊印，后有牌记，首有目录一卷。
+31.7×20.7cm"
+  data-year="2011"
+  data-company="北京保利"
+  data-status="流拍"
+  data-size="开本"
+  data-price=""
+  data-datetime="2011-12-05T22:00">
+  <a class="book-cover" href="items/31.html" aria-label="查看 胡广 朝鲜纯祖20年（1820） 周易传义大全二十四卷">
+    <img src="images/kr/thumb/kr_0031.webp" alt="胡广 朝鲜纯祖20年（1820） 周易传义大全二十四卷拍品图" loading="lazy">
+    <span class="status status--unsold">流拍</span>
+  </a>
+  <div class="book-card-body">
+    <p class="book-kicker">2011-12-05 · 22:00</p>
+    <h3><a href="items/31.html">胡广 朝鲜纯祖20年（1820） 周易传义大全二十四卷</a></h3>
+    <p class="book-author">——</p>
+    <div class="book-card-foot">
+      <span class="company">北京保利</span>
+      <span class="price">流拍</span>
+    </div>
+  </div>
+</article>
+<article class="book-card"
+  data-id="32"
+  data-title="梦窝集三卷 朝鲜·金昌辑"
+  data-search="梦窝集三卷 朝鲜·金昌辑 金昌  博古斋 2011年春季大型艺术品拍卖会 古籍善本专场 （1册）
+高丽皮纸 线装
+朝鲜木活字本
+本品活字印刷，品相佳。
+半框：21×17cm"
+  data-year="2011"
+  data-company="博古斋"
+  data-status="流拍"
+  data-size="半框"
+  data-price=""
+  data-datetime="2011-06-26T10:00">
+  <a class="book-cover" href="items/32.html" aria-label="查看 梦窝集三卷 朝鲜·金昌辑">
+    <img src="images/kr/thumb/kr_0032.webp" alt="梦窝集三卷 朝鲜·金昌辑拍品图" loading="lazy">
+    <span class="status status--unsold">流拍</span>
+  </a>
+  <div class="book-card-body">
+    <p class="book-kicker">2011-06-26 · 10:00</p>
+    <h3><a href="items/32.html">梦窝集三卷 朝鲜·金昌辑</a></h3>
+    <p class="book-author">金昌</p>
+    <div class="book-card-foot">
+      <span class="company">博古斋</span>
+      <span class="price">流拍</span>
+    </div>
+  </div>
+</article>
+<article class="book-card"
+  data-id="33"
+  data-title="朝鲜正祖大王文集四十卷 朝鲜·金载瓒编辑"
+  data-search="朝鲜正祖大王文集四十卷 朝鲜·金载瓒编辑 金载瓒 1814年朝鲜内府铜活字印本 上海国拍 2011春季拍卖会 古籍善本专场 1814年朝鲜内府铜活字印本
+开化纸 线装 二十一册一函
+提要：朝鲜正祖宣皇帝，姓李氏，讳祘，庄献世子第二子。1752年（英祖二十八年）生。1776年即位。至1800年庚申于昌庆宫迎春轩驾崩。在位二十四年，终年四十九岁。1814年金载瓉编成其文集，凡四十卷，二十一册，以“显宗实录字”排印。只不过为衔接之前1776年吴光运所编《历代御制文集》，故卷数起自三十八，终于七十七，非零种，实为单行本。半页十行二十字，花鱼尾。鱼尾下记“列圣御制卷几”，上印“正宗”二字。字画精雅，行宽幅疏。此本用中国开化纸刷印，极为特殊，估计当时以此纸刷印若干部，其中几部赠予清廷。在中韩文化交流史上有着特殊意义。
+朝鲜国所编《列圣御制文集》，辑录朝鲜历代帝皇之作，代有所编，故所收帝王人数、分卷及印刷技术等皆有不同。初编采用雕版印刷，凡分五次编辑。之后重编时采用“显宗实录字”【排印《显宗实录》所用之铜活字】排印，始自1776年吴光运编辑，自太祖讫于先帝英祖文集，凡三十七卷附别编，共二十三册。是为朝鲜用铜活字排印《历代御制文集》之始，其后每代帝皇驾崩后，均以显宗字排印其文集，故实为单行本，然总名之曰“历代御制集”，卷数亦相衔接。如正祖大王文集之后，1836年排印纯祖、翼宗文集十八卷，始于卷七十八、终于卷九十五；1850年编宪宗文集，自卷九十六至卷一百；1865年编哲宗文集，自卷一百一至卷一百四。自哲宗之后始改以整理字排印。总计《历代御制文集》共一百零四卷，始于1776年终于1865年，前后九十年分五次编成，仅第一次为合编，此后每代帝皇单独编为一集，只不过卷数相互衔接而已。
+34×22cm"
+  data-year="2011"
+  data-company="上海国拍"
+  data-status="流拍"
+  data-size="开本"
+  data-price=""
+  data-datetime="2011-06-24T13:00">
+  <a class="book-cover" href="items/33.html" aria-label="查看 朝鲜正祖大王文集四十卷 朝鲜·金载瓒编辑">
+    <img src="images/kr/thumb/kr_0033.webp" alt="朝鲜正祖大王文集四十卷 朝鲜·金载瓒编辑拍品图" loading="lazy">
+    <span class="status status--unsold">流拍</span>
+  </a>
+  <div class="book-card-body">
+    <p class="book-kicker">2011-06-24 · 13:00</p>
+    <h3><a href="items/33.html">朝鲜正祖大王文集四十卷 朝鲜·金载瓒编辑</a></h3>
+    <p class="book-author">金载瓒</p>
+    <div class="book-card-foot">
+      <span class="company">上海国拍</span>
+      <span class="price">流拍</span>
+    </div>
+  </div>
+</article>
+<article class="book-card"
+  data-id="34"
+  data-title="御定陆奏约选二卷 唐·陆贽撰；朝鲜·正宗李算选"
+  data-search="御定陆奏约选二卷 唐·陆贽撰；朝鲜·正宗李算选 唐·陆贽撰；朝鲜·正宗李算选 清嘉庆二年（1797年）朝鲜内阁铜活字印本 上海国拍 2010年秋季艺术品拍卖会 古籍善本专场 钤印：奎章之宝【朝鲜内府印记】
+清嘉庆二年（1797年）朝鲜内阁铜活字印本
+皮纸 线装 一大册一函
+提要：此朝鲜李朝正宗帝以新铸“丁酉字”排印，丁酉字为正宗元年（1777年）所铸铜活字，字体精美，时干支丁酉，故称为“丁酉字”。此本半页十行十八字，白口，单鱼尾，四周双边。框高26公分，宽18.2公分，书品宽大。墨色如漆，排印缜密，其精美不让我国精写刻本，实为铜活字本中精品。版权页左下角题“丁巳活印”，考正宗帝丁巳当我国嘉庆二年。此本内页有内阁赐书题记五行：“嘉庆二年闰六月日内赐直提学李晚秀陆奏约选一件，命除谢恩。检校待教臣沈（某）”。为排印当年赐予大臣李晚秀者（字成仲。乾隆四十八年乾隆帝出关祭祀祖陵，朝鲜派出以左议政李福源为首之“圣节及沈阳问安”使团，前往沈阳接驾。李成仲是朝鲜使团正使李福源次子，时考取进士尚未补官，以李福源随员前往沈阳）。尾有跋语云：“先是甲寅上以陆贽奏议有裨治教，亲选二十九篇，删繁就要，以资乙览。是年丁巳夏，更加厘校，名曰《陆奏约选》，命以丁酉字印进”。此本所用纸张及封面皆我国所产。
+37×27cm"
+  data-year="2010"
+  data-company="上海国拍"
+  data-status="成交"
+  data-size="开本"
+  data-price="53800.0"
+  data-datetime="2010-12-30T13:00">
+  <a class="book-cover" href="items/34.html" aria-label="查看 御定陆奏约选二卷 唐·陆贽撰；朝鲜·正宗李算选">
+    <img src="images/kr/thumb/kr_0034.webp" alt="御定陆奏约选二卷 唐·陆贽撰；朝鲜·正宗李算选拍品图" loading="lazy">
+    <span class="status status--sold">成交</span>
+  </a>
+  <div class="book-card-body">
+    <p class="book-kicker">2010-12-30 · 13:00</p>
+    <h3><a href="items/34.html">御定陆奏约选二卷 唐·陆贽撰；朝鲜·正宗李算选</a></h3>
+    <p class="book-author">唐·陆贽撰；朝鲜·正宗李算选</p>
+    <div class="book-card-foot">
+      <span class="company">上海国拍</span>
+      <span class="price">RMB 53,800</span>
+    </div>
+  </div>
+</article>
+<article class="book-card"
+  data-id="38"
+  data-title="朝鲜李朝许浚著 东医宝鉴二十三卷目二卷"
+  data-search="朝鲜李朝许浚著 东医宝鉴二十三卷目二卷 许浚 明万历年间朝鲜刻本（1573-1620） 北京保利 5周年春季拍卖会 中国古籍文献及名家翰墨 明万历年间朝鲜刻本
+25册 高丽皮纸
+提要：朝鲜李朝阳平君许浚（1546-1615），字清源，号龟岩，名医，宣祖朝任内医，为王室医病，屡有功，一五九二年任御医，后为扈尘功臣三等。历十余年，完成医学名著《东医宝鉴》。书分内景四卷，外形四卷，杂病十一卷，汤液三卷，针灸一卷。为当时朝鲜医学集大成之作。原品相保存。
+25.5×18cm"
+  data-year="2010"
+  data-company="北京保利"
+  data-status="流拍"
+  data-size="开本"
+  data-price=""
+  data-datetime="2010-06-02T13:30">
+  <a class="book-cover" href="items/38.html" aria-label="查看 朝鲜李朝许浚著 东医宝鉴二十三卷目二卷">
+    <img src="images/kr/thumb/kr_0038.webp" alt="朝鲜李朝许浚著 东医宝鉴二十三卷目二卷拍品图" loading="lazy">
+    <span class="status status--unsold">流拍</span>
+  </a>
+  <div class="book-card-body">
+    <p class="book-kicker">2010-06-02 · 13:30</p>
+    <h3><a href="items/38.html">朝鲜李朝许浚著 东医宝鉴二十三卷目二卷</a></h3>
+    <p class="book-author">许浚</p>
+    <div class="book-card-foot">
+      <span class="company">北京保利</span>
+      <span class="price">流拍</span>
+    </div>
+  </div>
+</article>
+<article class="book-card"
+  data-id="37"
+  data-title="朝鲜刻本二种 含《沧州遗稿》一卷、《真斋先生逸稿》三卷"
+  data-search="朝鲜刻本二种 含《沧州遗稿》一卷、《真斋先生逸稿》三卷 ——  北京保利 5周年春季拍卖会 中国古籍文献及名家翰墨 朝鲜印本
+2册 高丽皮纸
+提要：含《沧州遗稿》一卷、《真斋先生逸稿》三卷。活字印刷，开本阔大。保存品相完好。
+31×20cm"
+  data-year="2010"
+  data-company="北京保利"
+  data-status="流拍"
+  data-size="开本"
+  data-price=""
+  data-datetime="2010-06-02T13:30">
+  <a class="book-cover" href="items/37.html" aria-label="查看 朝鲜刻本二种 含《沧州遗稿》一卷、《真斋先生逸稿》三卷">
+    <img src="images/kr/thumb/kr_0037.webp" alt="朝鲜刻本二种 含《沧州遗稿》一卷、《真斋先生逸稿》三卷拍品图" loading="lazy">
+    <span class="status status--unsold">流拍</span>
+  </a>
+  <div class="book-card-body">
+    <p class="book-kicker">2010-06-02 · 13:30</p>
+    <h3><a href="items/37.html">朝鲜刻本二种 含《沧州遗稿》一卷、《真斋先生逸稿》三卷</a></h3>
+    <p class="book-author">——</p>
+    <div class="book-card-foot">
+      <span class="company">北京保利</span>
+      <span class="price">流拍</span>
+    </div>
+  </div>
+</article>
+<article class="book-card"
+  data-id="36"
+  data-title="朝鲜金昌辑 梦窝集三卷"
+  data-search="朝鲜金昌辑 梦窝集三卷 金昌  北京保利 5周年春季拍卖会 中国古籍文献及名家翰墨 朝鲜活字本
+1册 高丽皮纸本
+提要：活字印刷，原装帧保存，品相佳。
+31×20.8cm"
+  data-year="2010"
+  data-company="北京保利"
+  data-status="流拍"
+  data-size="开本"
+  data-price=""
+  data-datetime="2010-06-02T13:30">
+  <a class="book-cover" href="items/36.html" aria-label="查看 朝鲜金昌辑 梦窝集三卷">
+    <img src="images/kr/thumb/kr_0036.webp" alt="朝鲜金昌辑 梦窝集三卷拍品图" loading="lazy">
+    <span class="status status--unsold">流拍</span>
+  </a>
+  <div class="book-card-body">
+    <p class="book-kicker">2010-06-02 · 13:30</p>
+    <h3><a href="items/36.html">朝鲜金昌辑 梦窝集三卷</a></h3>
+    <p class="book-author">金昌</p>
+    <div class="book-card-foot">
+      <span class="company">北京保利</span>
+      <span class="price">流拍</span>
+    </div>
+  </div>
+</article>
+<article class="book-card"
+  data-id="35"
+  data-title="朝鲜刻本三种 《精选东莱先生左氏传议句解八卷》、《剪灯新话句解二卷》、《杜律二卷》三种。"
+  data-search="朝鲜刻本三种 《精选东莱先生左氏传议句解八卷》、《剪灯新话句解二卷》、《杜律二卷》三种。 ——  北京保利 5周年春季拍卖会 中国古籍文献及名家翰墨 朝鲜刻本
+7册 高丽皮纸
+提要：含《精选东莱先生左氏传议句解八卷》、《剪灯新话句解二卷》、《杜律二卷》三种。
+尺寸不一"
+  data-year="2010"
+  data-company="北京保利"
+  data-status="流拍"
+  data-size="尺寸不一"
+  data-price=""
+  data-datetime="2010-06-02T13:30">
+  <a class="book-cover" href="items/35.html" aria-label="查看 朝鲜刻本三种 《精选东莱先生左氏传议句解八卷》、《剪灯新话句解二卷》、《杜律二卷》三种。">
+    <img src="images/kr/thumb/kr_0035.webp" alt="朝鲜刻本三种 《精选东莱先生左氏传议句解八卷》、《剪灯新话句解二卷》、《杜律二卷》三种。拍品图" loading="lazy">
+    <span class="status status--unsold">流拍</span>
+  </a>
+  <div class="book-card-body">
+    <p class="book-kicker">2010-06-02 · 13:30</p>
+    <h3><a href="items/35.html">朝鲜刻本三种 《精选东莱先生左氏传议句解八卷》、《剪灯新话句解二卷》、《杜律二卷》三种。</a></h3>
+    <p class="book-author">——</p>
+    <div class="book-card-foot">
+      <span class="company">北京保利</span>
+      <span class="price">流拍</span>
+    </div>
+  </div>
+</article>
+<article class="book-card"
+  data-id="39"
+  data-title="朝鲜李朝许浚著 东医宝鉴二十三卷目二卷"
+  data-search="朝鲜李朝许浚著 东医宝鉴二十三卷目二卷 许浚 明万历年间朝鲜刻本（1573-1620） 北京保利 2009秋季拍卖会 古籍文献 名家翰墨 明万历年间朝鲜刻本
+25册 高丽皮纸
+提要：朝鲜李朝阳平君许浚（1546-1615），字清源，号龟岩，名医，宣祖朝任内医，为王室医病，屡有功。1592年任御医，后为扈尘功臣三等。历十余年，完成医学名著《东医宝鉴》。书分内景四卷，外形四卷，杂病十一卷，汤液三卷，针灸一卷。为当时朝鲜医学集大成之作。原品相保存。
+25.5×18cm"
+  data-year="2009"
+  data-company="北京保利"
+  data-status="成交"
+  data-size="开本"
+  data-price="44800.0"
+  data-datetime="2009-11-24T13:30">
+  <a class="book-cover" href="items/39.html" aria-label="查看 朝鲜李朝许浚著 东医宝鉴二十三卷目二卷">
+    <img src="images/kr/thumb/kr_0039.webp" alt="朝鲜李朝许浚著 东医宝鉴二十三卷目二卷拍品图" loading="lazy">
+    <span class="status status--sold">成交</span>
+  </a>
+  <div class="book-card-body">
+    <p class="book-kicker">2009-11-24 · 13:30</p>
+    <h3><a href="items/39.html">朝鲜李朝许浚著 东医宝鉴二十三卷目二卷</a></h3>
+    <p class="book-author">许浚</p>
+    <div class="book-card-foot">
+      <span class="company">北京保利</span>
+      <span class="price">RMB 44,800</span>
+    </div>
+  </div>
+</article>
+<article class="book-card"
+  data-id="40"
+  data-title="朝鲜刻本 春秋（存二卷） 一册"
+  data-search="朝鲜刻本 春秋（存二卷） 一册 ——  北京万隆 2009年仲夏艺术品拍卖会 古籍文献 35*22.2cm"
+  data-year="2009"
+  data-company="北京万隆"
+  data-status="未提交"
+  data-size="开本"
+  data-price=""
+  data-datetime="2009-07-19T09:00">
+  <a class="book-cover" href="items/40.html" aria-label="查看 朝鲜刻本 春秋（存二卷） 一册">
+    <img src="images/kr/thumb/kr_0040.webp" alt="朝鲜刻本 春秋（存二卷） 一册拍品图" loading="lazy">
+    <span class="status status--not-submitted">未提交</span>
+  </a>
+  <div class="book-card-body">
+    <p class="book-kicker">2009-07-19 · 09:00</p>
+    <h3><a href="items/40.html">朝鲜刻本 春秋（存二卷） 一册</a></h3>
+    <p class="book-author">——</p>
+    <div class="book-card-foot">
+      <span class="company">北京万隆</span>
+      <span class="price">未提交</span>
+    </div>
+  </div>
+</article>
+<article class="book-card"
+  data-id="41"
+  data-title="（朝鲜）安帮俊撰 隐峰野史别录 （一册）"
+  data-search="（朝鲜）安帮俊撰 隐峰野史别录 （一册） 安帮俊 日本嘉永三年（1850）刻本 中国嘉德 嘉德四季第十八期拍卖会 古籍善本 碑帖法书 日本嘉永三年（1850）刻本
+纸本
+此书为朝鲜安帮俊撰，记述日本幕府丰臣秀吉于幕历壬辰（1542）入侵朝鲜之役，时朝鲜李朝腐败无能，一时八道尽失，败缩平壤，安氏亲历斯乱，后经明朝驰援始辞危难。此书乃日本刊本，正文旁注有日文平假名。
+18×12.8cm"
+  data-year="2009"
+  data-company="中国嘉德"
+  data-status="流拍"
+  data-size="开本"
+  data-price=""
+  data-datetime="2009-06-28T15:00">
+  <a class="book-cover" href="items/41.html" aria-label="查看 （朝鲜）安帮俊撰 隐峰野史别录 （一册）">
+    <img src="images/kr/thumb/kr_0041.webp" alt="（朝鲜）安帮俊撰 隐峰野史别录 （一册）拍品图" loading="lazy">
+    <span class="status status--unsold">流拍</span>
+  </a>
+  <div class="book-card-body">
+    <p class="book-kicker">2009-06-28 · 15:00</p>
+    <h3><a href="items/41.html">（朝鲜）安帮俊撰 隐峰野史别录 （一册）</a></h3>
+    <p class="book-author">安帮俊</p>
+    <div class="book-card-foot">
+      <span class="company">中国嘉德</span>
+      <span class="price">流拍</span>
+    </div>
+  </div>
+</article>
+<article class="book-card"
+  data-id="42"
+  data-title="游轩先生集四卷附录一卷年谱一卷 朝鲜·丁熿撰"
+  data-search="游轩先生集四卷附录一卷年谱一卷 朝鲜·丁熿撰 丁熿 自查：1821-1851 上海国拍 2009春季艺术品古籍拍卖会 上海国拍 朝鲜旧刻本
+高丽皮纸
+线装
+三册
+提要：丁熿，字季悔，号游轩。朝鲜名臣，生当明正嘉年间。此其后裔所刻，以明代为正朔，故其刊雕之时约当我国嘉道间，而其署年仍以崇祯八十八年纪年。写刊古朴而不失秀雅，桑皮纸，墨色浓郁，书品宽大，为朝鲜私家刻本之精品，品相极佳。《中国所藏高丽古籍综录》未见著录。
+30.6×19.1cm"
+  data-year="2009"
+  data-company="上海国拍"
+  data-status="流拍"
+  data-size="开本"
+  data-price=""
+  data-datetime="2009-06-21T13:30">
+  <a class="book-cover" href="items/42.html" aria-label="查看 游轩先生集四卷附录一卷年谱一卷 朝鲜·丁熿撰">
+    <img src="images/kr/thumb/kr_0042.webp" alt="游轩先生集四卷附录一卷年谱一卷 朝鲜·丁熿撰拍品图" loading="lazy">
+    <span class="status status--unsold">流拍</span>
+  </a>
+  <div class="book-card-body">
+    <p class="book-kicker">2009-06-21 · 13:30</p>
+    <h3><a href="items/42.html">游轩先生集四卷附录一卷年谱一卷 朝鲜·丁熿撰</a></h3>
+    <p class="book-author">丁熿</p>
+    <div class="book-card-foot">
+      <span class="company">上海国拍</span>
+      <span class="price">流拍</span>
+    </div>
+  </div>
+</article>
+<article class="book-card"
+  data-id="44"
+  data-title="清刘源渌撰、朝鲜宋秉璇识 近思续录十四卷"
+  data-search="清刘源渌撰、朝鲜宋秉璇识 近思续录十四卷 清刘源渌撰、朝鲜宋秉璇识 朝鲜大韩帝国高宗二十三年（1874）刊本 北京保利 2009春季拍卖会 古籍文献及名家墨迹 钤印：村上氏旧书
+朝鲜大韩帝国高宗二十三年（1874）刊本
+2册 高丽皮纸本
+提要：是书开本宏大，十行十八字，白口，四周双边，花双对鱼尾。目录后有“崇祯二百四十年七月甲戌秋七月己未恩津宋秉璇谨识”。朝鲜王朝历来不服大清统治，官方、民间仍多延用明崇祯年号，此为一证。恩津宋氏乃朝鲜大韩帝国时期望族，书礼传家。
+21×17cm"
+  data-year="2009"
+  data-company="北京保利"
+  data-status="流拍"
+  data-size="开本"
+  data-price=""
+  data-datetime="2009-05-30T13:30">
+  <a class="book-cover" href="items/44.html" aria-label="查看 清刘源渌撰、朝鲜宋秉璇识 近思续录十四卷">
+    <img src="images/kr/thumb/kr_0044.webp" alt="清刘源渌撰、朝鲜宋秉璇识 近思续录十四卷拍品图" loading="lazy">
+    <span class="status status--unsold">流拍</span>
+  </a>
+  <div class="book-card-body">
+    <p class="book-kicker">2009-05-30 · 13:30</p>
+    <h3><a href="items/44.html">清刘源渌撰、朝鲜宋秉璇识 近思续录十四卷</a></h3>
+    <p class="book-author">清刘源渌撰、朝鲜宋秉璇识</p>
+    <div class="book-card-foot">
+      <span class="company">北京保利</span>
+      <span class="price">流拍</span>
+    </div>
+  </div>
+</article>
+<article class="book-card"
+  data-id="43"
+  data-title="朝鲜李周冕撰 至乐窝集六卷"
+  data-search="朝鲜李周冕撰 至乐窝集六卷 李周冕  北京保利 2009春季拍卖会 古籍文献及名家墨迹 钤印：井上宜文文库
+朝鲜活字本
+3册 高丽皮纸本
+提要：收李周冕诗、书、祭文、行状、记、墓志等六卷。是书朝鲜活字印刷，十行二十字白口，四周双边，单花鱼尾，开本敞阔，间有铜活字影迹。李周冕，朝鲜大韩帝国高宗时期任朝鲜忠清北道观察府主事。
+21×17cm"
+  data-year="2009"
+  data-company="北京保利"
+  data-status="流拍"
+  data-size="开本"
+  data-price=""
+  data-datetime="2009-05-30T13:30">
+  <a class="book-cover" href="items/43.html" aria-label="查看 朝鲜李周冕撰 至乐窝集六卷">
+    <img src="images/kr/thumb/kr_0043.webp" alt="朝鲜李周冕撰 至乐窝集六卷拍品图" loading="lazy">
+    <span class="status status--unsold">流拍</span>
+  </a>
+  <div class="book-card-body">
+    <p class="book-kicker">2009-05-30 · 13:30</p>
+    <h3><a href="items/43.html">朝鲜李周冕撰 至乐窝集六卷</a></h3>
+    <p class="book-author">李周冕</p>
+    <div class="book-card-foot">
+      <span class="company">北京保利</span>
+      <span class="price">流拍</span>
+    </div>
+  </div>
+</article>
+<article class="book-card"
+  data-id="45"
+  data-title="朝鲜 许浚撰 东医宝鍳"
+  data-search="朝鲜 许浚撰 东医宝鍳 许浚  富彼国际 2008年秋季拍卖会 古籍善本 朝鲜刻本
+5函25册
+高丽皮纸。此书乃李朝王室御医许浚奉王命参考中国和朝鲜医书，经过十六年的努力，于1610年完成的汉方医书。该书取材广泛，对研究中国和朝鲜医学及其文献均有裨益，在朝鲜医家所撰的汉方医着中最负盛名，故于十八世纪广泛流行于中国，现在国内很多图书馆藏有此书。不少李朝刻书源源不断地流向中国，是东亚文化交流的具体体现。
+25.5X18cm"
+  data-year="2008"
+  data-company="富彼国际"
+  data-status="未提交"
+  data-size="开本"
+  data-price=""
+  data-datetime="2008-12-10T09:00">
+  <a class="book-cover" href="items/45.html" aria-label="查看 朝鲜 许浚撰 东医宝鍳">
+    <img src="images/kr/thumb/kr_0045.webp" alt="朝鲜 许浚撰 东医宝鍳拍品图" loading="lazy">
+    <span class="status status--not-submitted">未提交</span>
+  </a>
+  <div class="book-card-body">
+    <p class="book-kicker">2008-12-10 · 09:00</p>
+    <h3><a href="items/45.html">朝鲜 许浚撰 东医宝鍳</a></h3>
+    <p class="book-author">许浚</p>
+    <div class="book-card-foot">
+      <span class="company">富彼国际</span>
+      <span class="price">未提交</span>
+    </div>
+  </div>
+</article>
+<article class="book-card"
+  data-id="46"
+  data-title="朝鲜许浚撰 东医宝鉴二十三卷目录二卷"
+  data-search="朝鲜许浚撰 东医宝鉴二十三卷目录二卷 许浚 清刻本（自查：1766） 中国嘉德 2007年嘉德四季第十一期拍卖会 古籍善本碑帖法书 清刻本
+24册 白纸
+白口，四周单边，单黑鱼尾。
+古籍定级：四级
+破损定级：四级
+17.7×12cm"
+  data-year="2007"
+  data-company="中国嘉德"
+  data-status="成交"
+  data-size="开本"
+  data-price="784.0"
+  data-datetime="2007-09-16T13:30">
+  <a class="book-cover" href="items/46.html" aria-label="查看 朝鲜许浚撰 东医宝鉴二十三卷目录二卷">
+    <img src="images/kr/thumb/kr_0046.webp" alt="朝鲜许浚撰 东医宝鉴二十三卷目录二卷拍品图" loading="lazy">
+    <span class="status status--sold">成交</span>
+  </a>
+  <div class="book-card-body">
+    <p class="book-kicker">2007-09-16 · 13:30</p>
+    <h3><a href="items/46.html">朝鲜许浚撰 东医宝鉴二十三卷目录二卷</a></h3>
+    <p class="book-author">许浚</p>
+    <div class="book-card-foot">
+      <span class="company">中国嘉德</span>
+      <span class="price">RMB 784</span>
+    </div>
+  </div>
+</article>
+<article class="book-card"
+  data-id="48"
+  data-title="东医宝鉴二十三卷目二卷 朝鲜·许浚撰"
+  data-search="东医宝鉴二十三卷目二卷 朝鲜·许浚撰 许浚 中国明代万历间 博古斋 2008年首场大型艺术品拍卖会 古籍善本专场 钤印：河南中医学院图书馆
+高丽刊本（约中国明代万历间）
+高丽皮纸 线装 25册
+提要：明朝鲜阳平君许浚撰，凡内景四卷，外形四卷，杂病十一卷，汤液三卷，针灸一卷。许浚（1546-1615），字清源，号龟岩，李朝名医，宣祖朝任内医，为王室医病，屡有功，1592年任御医，后为扈尘功臣三等。1608年宣祖之，以医治疏忽罪罢职，嗣后专事医学研究与著述，历10余年，完成医学名著《东医宝鉴》。原上海博古斋大库藏品。
+版框尺寸：16×19cm"
+  data-year="2007"
+  data-company="博古斋"
+  data-status="流拍"
+  data-size="版框"
+  data-price=""
+  data-datetime="2007-07-08T13:01">
+  <a class="book-cover" href="items/48.html" aria-label="查看 东医宝鉴二十三卷目二卷 朝鲜·许浚撰">
+    <img src="images/kr/thumb/kr_0048.webp" alt="东医宝鉴二十三卷目二卷 朝鲜·许浚撰拍品图" loading="lazy">
+    <span class="status status--unsold">流拍</span>
+  </a>
+  <div class="book-card-body">
+    <p class="book-kicker">2007-07-08 · 13:01</p>
+    <h3><a href="items/48.html">东医宝鉴二十三卷目二卷 朝鲜·许浚撰</a></h3>
+    <p class="book-author">许浚</p>
+    <div class="book-card-foot">
+      <span class="company">博古斋</span>
+      <span class="price">流拍</span>
+    </div>
+  </div>
+</article>
+<article class="book-card"
+  data-id="47"
+  data-title="东医宝鉴二十三卷目二卷 朝鲜·许浚撰"
+  data-search="东医宝鉴二十三卷目二卷 朝鲜·许浚撰 许浚 中国明代万历间 博古斋 2007年首场大型艺术品拍卖会 古籍善本专场 钤印：河南中医学院图书馆
+高丽刊本（约中国明代万历间）
+高丽皮纸 线装 25册
+提要：明朝鲜阳平君许浚撰，凡内景四卷，外形四卷，杂病十一卷，汤液三卷，针灸一卷。许浚（1546-1615），字清源，号龟岩，李朝名医，宣祖朝任内医，为王室医病，屡有功，1592年任御医，后为扈尘功臣三等。1608年宣祖之，以医治疏忽罪罢职，嗣后专事医学研究与著述，历10余年，完成医学名著《东医宝鉴》。原上海博古斋大库藏品。
+版框尺寸：16×18cm"
+  data-year="2007"
+  data-company="博古斋"
+  data-status="流拍"
+  data-size="版框"
+  data-price=""
+  data-datetime="2007-07-08T13:00">
+  <a class="book-cover" href="items/47.html" aria-label="查看 东医宝鉴二十三卷目二卷 朝鲜·许浚撰">
+    <img src="images/kr/thumb/kr_0047.webp" alt="东医宝鉴二十三卷目二卷 朝鲜·许浚撰拍品图" loading="lazy">
+    <span class="status status--unsold">流拍</span>
+  </a>
+  <div class="book-card-body">
+    <p class="book-kicker">2007-07-08 · 13:00</p>
+    <h3><a href="items/47.html">东医宝鉴二十三卷目二卷 朝鲜·许浚撰</a></h3>
+    <p class="book-author">许浚</p>
+    <div class="book-card-foot">
+      <span class="company">博古斋</span>
+      <span class="price">流拍</span>
+    </div>
+  </div>
+</article>
+<article class="book-card"
+  data-id="49"
+  data-title="东医宝鉴二十三卷首二卷 朝鲜·许浚辑"
+  data-search="东医宝鉴二十三卷首二卷 朝鲜·许浚辑 许浚 日要享保九年大阪书林刻宽政十一年（1799）印本 上海国拍 2007年春季艺术品拍卖会 古籍善本 日要享保九年大阪书林刻宽政十一年（1799）印本
+日本皮纸 线装 二十五册四函
+26.5×18.5cm"
+  data-year="2007"
+  data-company="上海国拍"
+  data-status="成交"
+  data-size="开本"
+  data-price="8800.0"
+  data-datetime="2007-06-01T19:00">
+  <a class="book-cover" href="items/49.html" aria-label="查看 东医宝鉴二十三卷首二卷 朝鲜·许浚辑">
+    <img src="images/kr/thumb/kr_0049.webp" alt="东医宝鉴二十三卷首二卷 朝鲜·许浚辑拍品图" loading="lazy">
+    <span class="status status--sold">成交</span>
+  </a>
+  <div class="book-card-body">
+    <p class="book-kicker">2007-06-01 · 19:00</p>
+    <h3><a href="items/49.html">东医宝鉴二十三卷首二卷 朝鲜·许浚辑</a></h3>
+    <p class="book-author">许浚</p>
+    <div class="book-card-foot">
+      <span class="company">上海国拍</span>
+      <span class="price">RMB 8,800</span>
+    </div>
+  </div>
+</article>
+<article class="book-card"
+  data-id="50"
+  data-title="日本明治十八年（1885年）出版十洲居士著《古泉大全》线装本三十八册全"
+  data-search="日本明治十八年（1885年）出版十洲居士著《古泉大全》线装本三十八册全 十洲居士 日本明治十八年（1885年） 中国嘉德 中国嘉德2007春季拍卖会 金银锭 金银币 古钱 三十八卷目录为：卷首目录附言、卷首凡例备考、卷壹方足布 周圜法唐虞夏商周及列国、卷之贰方组布 尖足布 周列国、卷之叁尖足圆足空首布 周列国、卷之肆空首布 齐刀 周列国、卷之伍赵刀化 尖首刀 周末战国、卷之陆战国刀及圜法周末战国秦补遗、卷之漆西汉新、卷之捌东汉蜀吴晋赵凉宋梁、卷之玖魏齐陈北周隋未考、卷之十 十二钱及近铸日本 附近代绘钱、卷之十一唐附不知品总论、卷之十二唐五代燕、卷之十三蜀闽楚南汉南唐、卷之十四辽北宋太祖太宗、卷之十五对泉总论北宋真宗仁宗、卷之十六北宋仁宗英宗、卷之十七北宋神宗、卷之十八北宋这宗附冲绳钱、卷之十九北宋徽宗、卷之二十徽宗钦宗南宋高宗孝宗、卷之二十一南宋光宗宁宗、卷之二十二理宗度宗齐西夏附蛮书钱、卷之二十三金元、卷之二十四宋吴天完汉明、卷之二十五明惠宗迨熹宗、卷二十六明怀宗及诸王及自立、券之二十七清之一、卷之二十八清之二、卷之二十九清之三、卷之三十厌胜品第一、卷之三十一厌胜品第二、卷之三十二厌胜品第三、续集券之壹安南国、续集券之贰安南国第二、续集券之叁安南国第三、续集卷之驷朝鲜国"
+  data-year="2007"
+  data-company="中国嘉德"
+  data-status="流拍"
+  data-size="未著录"
+  data-price=""
+  data-datetime="2007-05-23T20:07">
+  <a class="book-cover" href="items/50.html" aria-label="查看 日本明治十八年（1885年）出版十洲居士著《古泉大全》线装本三十八册全">
+    <img src="images/kr/thumb/kr_0050.webp" alt="日本明治十八年（1885年）出版十洲居士著《古泉大全》线装本三十八册全拍品图" loading="lazy">
+    <span class="status status--unsold">流拍</span>
+  </a>
+  <div class="book-card-body">
+    <p class="book-kicker">2007-05-23 · 20:07</p>
+    <h3><a href="items/50.html">日本明治十八年（1885年）出版十洲居士著《古泉大全》线装本三十八册全</a></h3>
+    <p class="book-author">十洲居士</p>
+    <div class="book-card-foot">
+      <span class="company">中国嘉德</span>
+      <span class="price">流拍</span>
+    </div>
+  </div>
+</article>
+<article class="book-card"
+  data-id="51"
+  data-title="朝鲜安帮俊撰 隐峰野史别录"
+  data-search="朝鲜安帮俊撰 隐峰野史别录 安帮俊 日本嘉永三年（1850）刻本 中国嘉德 中国嘉德2006秋季拍卖会 古籍善本 日本嘉永三年（1850）刻本
+1册 皮纸
+18×12.8cm"
+  data-year="2006"
+  data-company="中国嘉德"
+  data-status="流拍"
+  data-size="开本"
+  data-price=""
+  data-datetime="2006-11-23T09:30">
+  <a class="book-cover" href="items/51.html" aria-label="查看 朝鲜安帮俊撰 隐峰野史别录">
+    <img src="images/kr/thumb/kr_0051.webp" alt="朝鲜安帮俊撰 隐峰野史别录拍品图" loading="lazy">
+    <span class="status status--unsold">流拍</span>
+  </a>
+  <div class="book-card-body">
+    <p class="book-kicker">2006-11-23 · 09:30</p>
+    <h3><a href="items/51.html">朝鲜安帮俊撰 隐峰野史别录</a></h3>
+    <p class="book-author">安帮俊</p>
+    <div class="book-card-foot">
+      <span class="company">中国嘉德</span>
+      <span class="price">流拍</span>
+    </div>
+  </div>
+</article>
+<article class="book-card"
+  data-id="52"
+  data-title="四书集注"
+  data-search="四书集注 —— 约明末朝鲜 上海嘉泰 2006春季大型艺术品拍卖会 古籍善本 约明末朝鲜刻本
+线装四函十六册 高丽皮纸
+说明：高丽本亦称朝鲜本，指朝鲜刻印的中文古籍。我国印刷术很早传入朝鲜，朝鲜刻印之书流入我国也很多。无论刻本或活字本，均为软体大字，皮纸精印，书品宽大，醒人眼目。孙从添《藏书纪要》说：“外国所刻之书，高丽本最好。五经、四书、医药等书，皆从古本。凡中夏所刻，向皆字句脱落，章数不全者，而高丽竟有完全善本。”可见朝鲜过去刻印古籍是很讲究的。
+33×22.5cm"
+  data-year="2006"
+  data-company="上海嘉泰"
+  data-status="流拍"
+  data-size="开本"
+  data-price=""
+  data-datetime="2006-06-29T09:30">
+  <a class="book-cover" href="items/52.html" aria-label="查看 四书集注">
+    <img src="images/kr/thumb/kr_0052.webp" alt="四书集注拍品图" loading="lazy">
+    <span class="status status--unsold">流拍</span>
+  </a>
+  <div class="book-card-body">
+    <p class="book-kicker">2006-06-29 · 09:30</p>
+    <h3><a href="items/52.html">四书集注</a></h3>
+    <p class="book-author">——</p>
+    <div class="book-card-foot">
+      <span class="company">上海嘉泰</span>
+      <span class="price">流拍</span>
+    </div>
+  </div>
+</article>
+<article class="book-card"
+  data-id="53"
+  data-title="朝鲜许浚等撰 东医宝鉴"
+  data-search="朝鲜许浚等撰 东医宝鉴 许浚 朝鲜光海君5年（1613年）铜活字印本 中国嘉德 中国嘉德2005秋季拍卖会 古籍善本 朝鲜光海君5年（1613年）铜活字印本
+25册 纸本
+提要：医学全书。是朝鲜古代药学巨帙，二十三卷。朝鲜宣祖及光海君时代许浚等撰，于光海君2年（1610年）撰成，三年后（光海君5年）（1613年）正式刊行。
+作者选摘我国明以前医籍予以分类编纂而成，内容宏富而有条理，在朝鲜医家所撰的汉方医着中最负盛名。为朝鲜最佳的综合性传统医学医籍。于明末清初传入中国。在韩国医学史上堪与中国明朝李时珍《本草纲目》相比，两书同样是记载各类草药的医书集大成之作，对后代医学影响极深。
+此本为朝鲜铜活字印本，用纸为朝鲜皮纸，极具朝鲜特色。
+25.7×18cm"
+  data-year="2005"
+  data-company="中国嘉德"
+  data-status="流拍"
+  data-size="开本"
+  data-price=""
+  data-datetime="2005-11-04T13:30">
+  <a class="book-cover" href="items/53.html" aria-label="查看 朝鲜许浚等撰 东医宝鉴">
+    <img src="images/kr/thumb/kr_0053.webp" alt="朝鲜许浚等撰 东医宝鉴拍品图" loading="lazy">
+    <span class="status status--unsold">流拍</span>
+  </a>
+  <div class="book-card-body">
+    <p class="book-kicker">2005-11-04 · 13:30</p>
+    <h3><a href="items/53.html">朝鲜许浚等撰 东医宝鉴</a></h3>
+    <p class="book-author">许浚</p>
+    <div class="book-card-foot">
+      <span class="company">中国嘉德</span>
+      <span class="price">流拍</span>
+    </div>
+  </div>
+</article>
+<article class="book-card"
+  data-id="56"
+  data-title="朝鲜 全谬玉篇二卷"
+  data-search="朝鲜 全谬玉篇二卷 ——  中国嘉德 中国嘉德2003秋季拍卖会 古籍善本 21.8×16cm
+1函2册 高丽皮纸
+刻本"
+  data-year="2003"
+  data-company="中国嘉德"
+  data-status="流拍"
+  data-size="开本"
+  data-price=""
+  data-datetime="2003-11-26T19:00">
+  <a class="book-cover" href="items/56.html" aria-label="查看 朝鲜 全谬玉篇二卷">
+    <img src="images/kr/thumb/kr_0056.webp" alt="朝鲜 全谬玉篇二卷拍品图" loading="lazy">
+    <span class="status status--unsold">流拍</span>
+  </a>
+  <div class="book-card-body">
+    <p class="book-kicker">2003-11-26 · 19:00</p>
+    <h3><a href="items/56.html">朝鲜 全谬玉篇二卷</a></h3>
+    <p class="book-author">——</p>
+    <div class="book-card-foot">
+      <span class="company">中国嘉德</span>
+      <span class="price">流拍</span>
+    </div>
+  </div>
+</article>
+<article class="book-card"
+  data-id="55"
+  data-title="朝鲜 骊川李氏香坛派谱"
+  data-search="朝鲜 骊川李氏香坛派谱 ——  中国嘉德 中国嘉德2003秋季拍卖会 古籍善本 21.5×16.5cm
+2册 高丽皮纸
+刻本"
+  data-year="2003"
+  data-company="中国嘉德"
+  data-status="流拍"
+  data-size="开本"
+  data-price=""
+  data-datetime="2003-11-26T19:00">
+  <a class="book-cover" href="items/55.html" aria-label="查看 朝鲜 骊川李氏香坛派谱">
+    <img src="images/kr/thumb/kr_0055.webp" alt="朝鲜 骊川李氏香坛派谱拍品图" loading="lazy">
+    <span class="status status--unsold">流拍</span>
+  </a>
+  <div class="book-card-body">
+    <p class="book-kicker">2003-11-26 · 19:00</p>
+    <h3><a href="items/55.html">朝鲜 骊川李氏香坛派谱</a></h3>
+    <p class="book-author">——</p>
+    <div class="book-card-foot">
+      <span class="company">中国嘉德</span>
+      <span class="price">流拍</span>
+    </div>
+  </div>
+</article>
+<article class="book-card"
+  data-id="54"
+  data-title="朝鲜正宗二十一年 砺山宋氏族谱"
+  data-search="朝鲜正宗二十一年 砺山宋氏族谱 —— 朝鲜正宗二十一年 中国嘉德 中国嘉德2003秋季拍卖会 古籍善本 着录∶《中国所藏高丽古籍综录》
+32×21.3cm
+存4册 高丽皮纸
+砺山宋氏止观斋活字本
+提要：是书书品宽大，用高丽皮纸刷印，流传颇为少见。"
+  data-year="2003"
+  data-company="中国嘉德"
+  data-status="流拍"
+  data-size="开本"
+  data-price=""
+  data-datetime="2003-11-26T19:00">
+  <a class="book-cover" href="items/54.html" aria-label="查看 朝鲜正宗二十一年 砺山宋氏族谱">
+    <img src="images/kr/thumb/kr_0054.webp" alt="朝鲜正宗二十一年 砺山宋氏族谱拍品图" loading="lazy">
+    <span class="status status--unsold">流拍</span>
+  </a>
+  <div class="book-card-body">
+    <p class="book-kicker">2003-11-26 · 19:00</p>
+    <h3><a href="items/54.html">朝鲜正宗二十一年 砺山宋氏族谱</a></h3>
+    <p class="book-author">——</p>
+    <div class="book-card-foot">
+      <span class="company">中国嘉德</span>
+      <span class="price">流拍</span>
+    </div>
+  </div>
+</article>
+<article class="book-card"
+  data-id="57"
+  data-title="朝鲜安邦俊撰 隐峰野史别录"
+  data-search="朝鲜安邦俊撰 隐峰野史别录 安邦俊  中国嘉德 中国嘉德2003春季拍卖会 2003春季拍卖会·古籍善本 钤印∶复庵善本
+日本刻本
+1册 纸本
+11.3×12.5cm"
+  data-year="2003"
+  data-company="中国嘉德"
+  data-status="流拍"
+  data-size="开本"
+  data-price=""
+  data-datetime="2003-07-13T19:00">
+  <a class="book-cover" href="items/57.html" aria-label="查看 朝鲜安邦俊撰 隐峰野史别录">
+    <img src="images/kr/thumb/kr_0057.webp" alt="朝鲜安邦俊撰 隐峰野史别录拍品图" loading="lazy">
+    <span class="status status--unsold">流拍</span>
+  </a>
+  <div class="book-card-body">
+    <p class="book-kicker">2003-07-13 · 19:00</p>
+    <h3><a href="items/57.html">朝鲜安邦俊撰 隐峰野史别录</a></h3>
+    <p class="book-author">安邦俊</p>
+    <div class="book-card-foot">
+      <span class="company">中国嘉德</span>
+      <span class="price">流拍</span>
+    </div>
+  </div>
+</article></div>
+<div id="no-results" class="empty-state" hidden><p class="eyebrow">No records</p><h2>没有找到匹配记录</h2><p>请缩短关键词或清除筛选条件。</p></div>
+<noscript><p class="source-warning"><strong>提示</strong><p>JavaScript 已关闭，仍可浏览全部记录，但筛选和排序功能不可用。</p></p></noscript>
+
+  </main>
+  <footer class="site-footer">
+    <div>
+      <p><strong>朝鲜刻本拍卖文献库</strong> · 离线 HTML 数据库</p>
+      <p>数据来源：雅昌艺术网韩国刻本拍卖记录；原始表 58 条有效记录，图片已逐条核验。</p>
+    </div>
+    <a href="browse.html">进入图录</a>
+  </footer>
+  <script src="assets/browse.js"></script>
+</body>
+</html>

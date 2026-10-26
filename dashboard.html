@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="雅昌朝鲜刻本古籍拍卖图文检索与数据可视化">
+  <title>数据观察 · 朝鲜刻本拍卖文献库</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/style.css">
+  
+
+  <meta name="theme-color" content="#171513">
+  <meta name="color-scheme" content="dark">
+  <meta name="robots" content="index,follow">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="朝鲜刻本文献库">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="数据观察 · 朝鲜刻本拍卖文献库">
+  <meta property="og:description" content="雅昌朝鲜刻本古籍拍卖图文检索与数据可视化">
+  <meta property="og:image" content="preview/home.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到正文</a>
+  <header class="site-header">
+    <div class="nav-shell">
+      <a class="brand" href="index.html">
+        <span class="brand-seal" aria-hidden="true">刻</span>
+        <span>
+          <strong>朝鲜刻本拍卖文献库</strong>
+          <small>2000–2025 · 图文检索与统计</small>
+        </span>
+      </a>
+      <nav aria-label="主导航">
+        <a href="index.html">总览</a>
+        <a href="browse.html">图录浏览</a>
+        <a href="dashboard.html" class="active">数据观察</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+
+<section class="page-heading dashboard-heading">
+  <div><p class="eyebrow">Data observatory</p><h1>数据观察</h1><p>图表只回答数据能够支持的问题；缺失值、流拍与成交金额分别处理。</p></div>
+  <div class="coverage-stamp"><span>数据跨度</span><strong>2003—2025</strong></div>
+</section>
+<div class="metric-grid">
+  <article class="metric-card"><span>拍品记录</span><strong>58</strong><small>每条对应一次拍卖出现</small></article>
+  <article class="metric-card"><span>图片覆盖</span><strong>100<b>%</b></strong><small>58 / 58 条</small></article>
+  <article class="metric-card"><span>有效成交价</span><strong>31<b>%</b></strong><small>18 条可计算金额</small></article>
+  <article class="metric-card"><span>年代可解析</span><strong>38<b>%</b></strong><small>22 条有公元年</small></article>
+</div>
+<div class="chart-grid">
+  <section class="chart-panel wide"><div class="chart-heading"><div><p class="eyebrow">Auction timeline</p><h2>年度拍卖记录</h2></div><p>按成交状态分层</p></div><div id="year-chart" class="chart chart-large" role="img" aria-label="年度拍卖记录柱状图"></div></section>
+  <section class="chart-panel"><div class="chart-heading"><div><p class="eyebrow">Outcome</p><h2>成交状态</h2></div><p>58 条记录</p></div><div id="status-chart" class="chart" role="img" aria-label="成交状态环形图"></div></section>
+  <section class="chart-panel"><div class="chart-heading"><div><p class="eyebrow">Companies</p><h2>拍卖公司 Top 12</h2></div><p>深色为成交记录</p></div><div id="company-chart" class="chart chart-tall" role="img" aria-label="拍卖公司记录数横向柱状图"></div></section>
+  <section class="chart-panel"><div class="chart-heading"><div><p class="eyebrow">Price</p><h2>成交价格区间</h2></div><p>仅 18 条有效金额</p></div><div id="price-chart" class="chart" role="img" aria-label="成交价格区间柱状图"></div><p class="chart-note">可计算金额从 RMB 784 到 RMB 89,700，中位数 RMB 11,500。流拍和无金额记录不计为 0 元。</p></section>
+  <section class="chart-panel wide"><div class="chart-heading"><div><p class="eyebrow">Format</p><h2>开本尺寸分布</h2></div><p>横轴高 cm · 纵轴宽 cm · 点击进入详情</p></div><div id="size-chart" class="chart chart-large" role="img" aria-label="拍品开本尺寸散点图"></div></section>
+  <section class="chart-panel"><div class="chart-heading"><div><p class="eyebrow">Edition era</p><h2>创作年代世纪分布</h2></div><p>仅 22 条可换算记录</p></div><div id="era-chart" class="chart" role="img" aria-label="创作年代世纪分布柱状图"></div></section>
+</div>
+<script id="year-data" type="application/json">{"years":[2003,2005,2006,2007,2008,2009,2010,2011,2012,2013,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025],"series":[{"name":"成交","slug":"sold","values":[0,0,0,2,0,1,1,0,1,0,0,0,4,3,1,0,1,4,0,0]},{"name":"流拍","slug":"unsold","values":[4,1,2,3,0,4,4,3,3,0,1,1,0,1,0,0,1,1,0,0]},{"name":"未提供","slug":"missing","values":[0,0,0,0,0,0,0,0,0,3,1,0,0,0,0,1,0,0,1,3]},{"name":"未提交","slug":"not-submitted","values":[0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}]}</script>
+<script id="status-data" type="application/json">[{"name":"成交","value":18,"slug":"sold"},{"name":"流拍","value":29,"slug":"unsold"},{"name":"未提供","value":9,"slug":"missing"},{"name":"未提交","value":2,"slug":"not-submitted"}]</script>
+<script id="company-data" type="application/json">[{"name":"北京保利","total":11,"sold":1},{"name":"中国嘉德","total":9,"sold":1},{"name":"海王村","total":7,"sold":6},{"name":"中贸圣佳","total":5,"sold":1},{"name":"上海国拍","total":4,"sold":2},{"name":"博古斋","total":3,"sold":0},{"name":"南京嘉宁","total":2,"sold":0},{"name":"广东崇正","total":2,"sold":1},{"name":"中鸿信","total":2,"sold":2},{"name":"北京卓德","total":2,"sold":1},{"name":"孔网拍卖","total":1,"sold":0},{"name":"景星麟凤","total":1,"sold":0}]</script>
+<script id="price-data" type="application/json">{"labels":["<5千","5千–1万","1万–2万","2万–5万","5万以上"],"values":[5,4,3,3,3],"count":18,"min":784.0,"max":89700.0,"median":11500.0}</script>
+<script id="size-data" type="application/json">[{"name":"东医宝鉴二十三卷（朝鲜）许浚撰","value":[31.5,21.0,1],"status":"未提供","slug":"missing","price":null},{"name":"东医宝鉴二十三卷 全 〔朝鲜〕许浚著","value":[31.4,21.0,2],"status":"未提供","slug":"missing","price":null},{"name":"孔子圣迹图 朝鲜 金正穆 编","value":[29.3,19.8,3],"status":"未提供","slug":"missing","price":null},{"name":"孔子圣迹图 朝鲜 金正穆 编","value":[29.3,19.8,4],"status":"未提供","slug":"missing","price":null},{"name":"增补参赞秘传天机大要 二卷 〔明〕林绍周 撰 〔朝鲜〕池百源 订","value":[21.4,18.0,6],"status":"成交","slug":"sold","price":2070.0},{"name":"杜律分韵 五卷 〔朝鲜〕摛文院 编","value":[15.6,10.3,5],"status":"成交","slug":"sold","price":12700.0},{"name":"〔朝鲜〕许浚等 撰 东医宝鉴 二十三卷 目录 二卷","value":[24.9,18.3,9],"status":"流拍","slug":"unsold","price":null},{"name":"〔朝鲜〕申公 撰 笼潭集 四卷","value":[20.1,17.2,8],"status":"成交","slug":"sold","price":5175.0},{"name":"〔朝鲜〕李孟宗 撰 家礼增解 十四卷 目录 一卷","value":[24.3,18.5,7],"status":"成交","slug":"sold","price":7475.0},{"name":"〔朝鲜〕李退溪 编绘圣学十图","value":[75.0,47.5,10],"status":"成交","slug":"sold","price":11500.0},{"name":"许浚等撰 朝鲜 东医宝鉴二十三卷","value":[29.7,20.0,11],"status":"流拍","slug":"unsold","price":null},{"name":"朝鲜瓢活字玉纂","value":[26.0,19.0,12],"status":"未提供","slug":"missing","price":null},{"name":"许浚 撰 朝鲜 东医宝鉴二十三卷目录二卷","value":[23.4,14.6,14],"status":"流拍","slug":"unsold","price":null},{"name":"端木蕻良藏域外古籍四种十一册，含朝鲜刻本《雅诵》一册；日本刻本《江村消夏录》五册；日本刻本《刘向新序纂注》四册；珂罗版《日本名笔全集》一册","value":[33.0,21.0,16],"status":"成交","slug":"sold","price":4600.0},{"name":"惩毖录十六卷 杂记一卷（朝鲜） 柳成龙 撰","value":[31.3,20.0,17],"status":"成交","slug":"sold","price":4025.0},{"name":"明 李氏朝鲜内府旧藏 二程全书","value":[25.5,16.0,18],"status":"成交","slug":"sold","price":89700.0},{"name":"许浚 等 撰 朝鲜 东医宝鉴二十二卷","value":[23.6,14.6,19],"status":"成交","slug":"sold","price":20700.0},{"name":"朝鲜刻本 《天机大要》上下卷","value":[29.0,19.0,21],"status":"成交","slug":"sold","price":6900.0},{"name":"朝鲜课本 《诗传大全》二十卷","value":[32.0,22.0,20],"status":"成交","slug":"sold","price":13800.0},{"name":"顺治序本《御注孝经》朝鲜刻本高丽皮纸线装一册","value":[28.0,17.5,22],"status":"流拍","slug":"unsold","price":null},{"name":"游轩先生集四卷附录一卷年谱一卷（朝鲜）丁熿撰","value":[30.7,19.3,24],"status":"未提供","slug":"missing","price":null},{"name":"明 朝鲜版本经书类抄本三册","value":[25.2,18.0,25],"status":"未提供","slug":"missing","price":null},{"name":"朝鲜·许浚 著 东医宝鉴","value":[34.0,22.0,26],"status":"未提供","slug":"missing","price":null},{"name":"朝鲜丁熿撰 游轩先生集四卷附录一卷年谱一卷","value":[21.4,15.1,27],"status":"流拍","slug":"unsold","price":null},{"name":"朝鲜李承根撰 至乐窝遗稿六卷","value":[21.0,17.0,29],"status":"流拍","slug":"unsold","price":null},{"name":"朝鲜许浚等著 东医宝鉴","value":[25.2,15.0,28],"status":"流拍","slug":"unsold","price":null},{"name":"东医宝鉴二十卷（朝鲜）许浚撰","value":[21.1,13.1,30],"status":"成交","slug":"sold","price":4830.0},{"name":"胡广 朝鲜纯祖20年（1820） 周易传义大全二十四卷","value":[31.7,20.7,31],"status":"流拍","slug":"unsold","price":null},{"name":"梦窝集三卷 朝鲜·金昌辑","value":[21.0,17.0,32],"status":"流拍","slug":"unsold","price":null},{"name":"朝鲜正祖大王文集四十卷 朝鲜·金载瓒编辑","value":[34.0,22.0,33],"status":"流拍","slug":"unsold","price":null},{"name":"御定陆奏约选二卷 唐·陆贽撰；朝鲜·正宗李算选","value":[37.0,27.0,34],"status":"成交","slug":"sold","price":53800.0},{"name":"朝鲜李朝许浚著 东医宝鉴二十三卷目二卷","value":[25.5,18.0,38],"status":"流拍","slug":"unsold","price":null},{"name":"朝鲜刻本二种 含《沧州遗稿》一卷、《真斋先生逸稿》三卷","value":[31.0,20.0,37],"status":"流拍","slug":"unsold","price":null},{"name":"朝鲜金昌辑 梦窝集三卷","value":[31.0,20.8,36],"status":"流拍","slug":"unsold","price":null},{"name":"朝鲜李朝许浚著 东医宝鉴二十三卷目二卷","value":[25.5,18.0,39],"status":"成交","slug":"sold","price":44800.0},{"name":"朝鲜刻本 春秋（存二卷） 一册","value":[35.0,22.2,40],"status":"未提交","slug":"not-submitted","price":null},{"name":"（朝鲜）安帮俊撰 隐峰野史别录 （一册）","value":[18.0,12.8,41],"status":"流拍","slug":"unsold","price":null},{"name":"游轩先生集四卷附录一卷年谱一卷 朝鲜·丁熿撰","value":[30.6,19.1,42],"status":"流拍","slug":"unsold","price":null},{"name":"清刘源渌撰、朝鲜宋秉璇识 近思续录十四卷","value":[21.0,17.0,44],"status":"流拍","slug":"unsold","price":null},{"name":"朝鲜李周冕撰 至乐窝集六卷","value":[21.0,17.0,43],"status":"流拍","slug":"unsold","price":null},{"name":"朝鲜 许浚撰 东医宝鍳","value":[25.5,18.0,45],"status":"未提交","slug":"not-submitted","price":null},{"name":"朝鲜许浚撰 东医宝鉴二十三卷目录二卷","value":[17.7,12.0,46],"status":"成交","slug":"sold","price":784.0},{"name":"东医宝鉴二十三卷目二卷 朝鲜·许浚撰","value":[16.0,19.0,48],"status":"流拍","slug":"unsold","price":null},{"name":"东医宝鉴二十三卷目二卷 朝鲜·许浚撰","value":[16.0,18.0,47],"status":"流拍","slug":"unsold","price":null},{"name":"东医宝鉴二十三卷首二卷 朝鲜·许浚辑","value":[26.5,18.5,49],"status":"成交","slug":"sold","price":8800.0},{"name":"朝鲜安帮俊撰 隐峰野史别录","value":[18.0,12.8,51],"status":"流拍","slug":"unsold","price":null},{"name":"四书集注","value":[33.0,22.5,52],"status":"流拍","slug":"unsold","price":null},{"name":"朝鲜许浚等撰 东医宝鉴","value":[25.7,18.0,53],"status":"流拍","slug":"unsold","price":null},{"name":"朝鲜 全谬玉篇二卷","value":[21.8,16.0,56],"status":"流拍","slug":"unsold","price":null},{"name":"朝鲜 骊川李氏香坛派谱","value":[21.5,16.5,55],"status":"流拍","slug":"unsold","price":null},{"name":"朝鲜正宗二十一年 砺山宋氏族谱","value":[32.0,21.3,54],"status":"流拍","slug":"unsold","price":null},{"name":"朝鲜安邦俊撰 隐峰野史别录","value":[11.3,12.5,57],"status":"流拍","slug":"unsold","price":null}]</script>
+<script id="era-data" type="application/json">[{"name":"16世纪","value":2},{"name":"17世纪","value":4},{"name":"18世纪","value":7},{"name":"19世纪","value":9}]</script>
+
+  </main>
+  <footer class="site-footer">
+    <div>
+      <p><strong>朝鲜刻本拍卖文献库</strong> · 离线 HTML 数据库</p>
+      <p>数据来源：雅昌艺术网韩国刻本拍卖记录；原始表 58 条有效记录，图片已逐条核验。</p>
+    </div>
+    <a href="browse.html">进入图录</a>
+  </footer>
+  <script src="assets/echarts.min.js"></script><script src="assets/dashboard.js"></script>
+</body>
+</html>
